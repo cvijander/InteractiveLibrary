@@ -2,7 +2,16 @@
 {
     private static void Main(string[] args)
     {
-        Console.ForegroundColor = ConsoleColor.Cyan;
+        FrontPage();
+
+
+        DisplayMenu();
+
+    }
+
+    private static void FrontPage()
+    {
+        Console.Clear();
         Console.WriteLine("===============================================================");
         Console.WriteLine(" \"Posvećeno neograničenoj moći koja leži uspavana u Vama.\"");
         Console.WriteLine("  \"Ne dozvolite joj da i dalje drema. \"");
@@ -19,10 +28,6 @@
         Console.WriteLine("Press ENTER to start");
         Console.WriteLine();
         Console.ReadLine();
-        
-
-        DisplayMenu();
-
     }
 
     private static void DisplayMenu()
@@ -43,10 +48,10 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
-        string userInput = Console.ReadLine();
+        string userInput = Console.ReadLine().Trim();
 
         bool userOption = true;
-
+        // TRIM
 
         userOption = HandleUserInput(userInput);
         while (!userOption)
@@ -72,8 +77,7 @@
         }
         else 
         {
-            Console.WriteLine("Molimo unesite neku od ponudjenih opcija.");
-            Console.ReadLine();
+            ErrorMessage();
             return false;
         }
     }
@@ -87,5 +91,13 @@
     {
         Console.Clear();
         Console.WriteLine("2");
+    }
+
+    private static void ErrorMessage()
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Molimo pritisnite ENTER i ponovo odaberite ali samo neku od ponudjenih opcija.");
+        Console.ResetColor();
+        Console.ReadLine();
     }
 }
