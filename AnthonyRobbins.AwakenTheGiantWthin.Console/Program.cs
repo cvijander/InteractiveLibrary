@@ -7,6 +7,8 @@
 
         DisplayMenu();
 
+        //bool userOption = true;
+
     }
 
     private static void FrontPage()
@@ -32,6 +34,16 @@
 
     private static void DisplayMenu()
     {
+        DisplayMainMenu();
+        string userInput = Console.ReadLine().Trim();
+
+
+        // TRIM
+        ResultToDisplayMenu(HandleUserInput(userInput));
+    }
+
+    public static void DisplayMainMenu()
+    {
         Console.Clear();
         Console.WriteLine("==== GLAVNI MENU: PROBUDITE DIVA U SEBI ===");
         Console.WriteLine();
@@ -44,23 +56,19 @@
         Console.WriteLine("5. Definicije i citati");
         Console.WriteLine("6. Ljudi i primeri iz knjige");
         Console.WriteLine("7  Vase beleske");
-        Console.WriteLine("0  Izlaz iz programa" );
+        Console.WriteLine("0  Izlaz iz programa");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
-        string userInput = Console.ReadLine().Trim();
+    }
 
-        bool userOption = true;
-        // TRIM
-
-        userOption = HandleUserInput(userInput);
-        while (!userOption)
+    private static void ResultToDisplayMenu(bool option)
+    {
+      
+        while (!option)
         {
             DisplayMenu();
         }
-
-
-
     }
 
     private static bool HandleUserInput(string input)
