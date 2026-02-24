@@ -4,10 +4,11 @@
     {
         FrontPage();
 
+        
 
-        DisplayMenu();
+        ChooseToDisplayMenu();
 
-        //bool userOption = true;
+        
 
     }
 
@@ -32,15 +33,20 @@
         Console.ReadLine();
     }
 
-    private static void DisplayMenu()
+    public static void ChooseToDisplayMenu()
     {
-        DisplayMainMenu();
-        string userInput = Console.ReadLine().Trim();
+        bool displayMenu = true;       
 
+        while (displayMenu == true)
+        {
+            DisplayMainMenu();
 
-        // TRIM
-        ResultToDisplayMenu(HandleUserInput(userInput));
+            string userInput = Console.ReadLine().Trim();
+
+               (displayMenu) = (!HandleUserInput(userInput)) ;
+        }
     }
+                
 
     public static void DisplayMainMenu()
     {
@@ -62,14 +68,7 @@
         Console.Write("Unesite opciju: ");
     }
 
-    private static void ResultToDisplayMenu(bool option)
-    {
-      
-        while (!option)
-        {
-            DisplayMenu();
-        }
-    }
+    
 
     private static bool HandleUserInput(string input)
     {
