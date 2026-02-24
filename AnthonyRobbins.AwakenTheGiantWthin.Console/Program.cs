@@ -15,6 +15,7 @@
     private static void FrontPage()
     {
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("===============================================================");
         Console.WriteLine(" \"Posvećeno neograničenoj moći koja leži uspavana u Vama.\"");
         Console.WriteLine("  \"Ne dozvolite joj da i dalje drema. \"");
@@ -51,7 +52,7 @@
     public static void DisplayMainMenu()
     {
         Console.Clear();
-        Console.WriteLine("==== GLAVNI MENU: PROBUDITE DIVA U SEBI ===");
+        Console.WriteLine("==== GLAVNI MENU: PROBUDITE DIVA U SEBI ====");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
@@ -61,8 +62,8 @@
         Console.WriteLine("4. Pouka o sudbini");
         Console.WriteLine("5. Definicije i citati");
         Console.WriteLine("6. Ljudi i primeri iz knjige");
-        Console.WriteLine("7  Vase beleske");
-        Console.WriteLine("0  Izlaz iz programa");
+        Console.WriteLine("7. Vase beleske");
+        Console.WriteLine("0. Izlaz iz programa");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
@@ -82,6 +83,36 @@
             TakeControl();
             return false;
         }
+        else if (input == "3")
+        {
+            SevenDaysToShapeYourLife();
+            return false;
+        }
+        else if (input == "4")
+        {
+            DestinyLesson();
+            return false;
+        }
+        else if (input == "5")
+        {
+             DefinitionsAndQuotes();
+            return false;
+        }
+        else if (input == "6")
+        {
+             PeopleAndExamples();   
+             return false;
+        }
+        else if (input == "7")
+        {
+             Notes();
+            return false;
+        }
+        else if (input == "0")
+        {
+             ExitProgram();
+            return false;
+        }
         else 
         {
             ErrorMessage();
@@ -92,7 +123,7 @@
     private static void FreeYourPower()
     {
         Console.Clear();
-        Console.WriteLine("==== PRVI DEO: OSLOBODITE SVOJU MOC ===");
+        Console.WriteLine("==== PRVI DEO: OSLOBODITE SVOJU MOC ====");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
@@ -121,6 +152,46 @@
     {
         Console.Clear();
         Console.WriteLine("2");
+    }
+
+    private static void SevenDaysToShapeYourLife()
+    {
+        Console.Clear();
+        Console.WriteLine("3");
+    }
+
+    private static void DestinyLesson()
+    {
+        Console.Clear();
+        Console.WriteLine("4");
+    }
+
+    private static void DefinitionsAndQuotes()
+    {
+        Console.Clear();
+        Console.WriteLine("5");
+    }
+
+    private static void PeopleAndExamples()
+    {
+        Console.Clear();
+        Console.WriteLine("6");
+    }
+
+    private static void Notes()
+    {
+        Console.Clear();
+        Console.WriteLine("7");
+    }
+
+    private static void ExitProgram()
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("Hvala sto ste koristili ovaj program. Nadamo se da vam je pomogao da probudite diva u sebi!");
+        Console.WriteLine("Pritisnite ENTER za izlaz.");
+        Console.ResetColor();
+        Console.ReadLine();
     }
 
     private static void ErrorMessage()
