@@ -43,7 +43,7 @@
 
             string userInput = Console.ReadLine().Trim();
 
-               (displayMenu) = (!HandleUserInput(userInput)) ;
+               displayMenu = HandleUserInput(userInput);
         }
     }
                 
@@ -75,24 +75,47 @@
         if (input == "1")
         {
             FreeYourPower();
-            return true;
+            return false;
         }
         else if (input == "2")
         {
             TakeControl();
-            return true;
+            return false;
         }
         else 
         {
             ErrorMessage();
-            return false;
+            return true;
         }
     }
 
     private static void FreeYourPower()
     {
         Console.Clear();
-        Console.WriteLine("1");
+        Console.WriteLine("==== PRVI DEO: OSLOBODITE SVOJU MOC ===");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("1. Snovi o sudbini");
+        Console.WriteLine("2. Odluke: put do moci");
+        Console.WriteLine("3. Sila koja oblikuje Vas zivot");
+        Console.WriteLine("4. Sistemi uverenja: moc da stvaramo i unistavamo");
+        Console.WriteLine("5. Moze li promena da se dogodi u trenutku?");
+        Console.WriteLine("6. Kako da promenite nesto u svom zivotu: nauka neuroasocijativnog uslovljavanja");
+        Console.WriteLine("7. Kako da dobijete ono sto zaista zelite");
+        Console.WriteLine("8. Pitanja su odgovori");
+        Console.WriteLine("9. Recnik vrhunskog uspeha");
+        Console.WriteLine("10. Savaladajte prepreke, srusite zid, pustite slamku i zaplesite svojim putem do uspeha: moc zivotnih metafora");
+        Console.WriteLine("11. Deset emocija moci");
+        Console.WriteLine("12. Velicanstvena opsesija: gradjenje primamljive buducnosti");
+        Console.WriteLine("13. Desetodnevni mentalni izazov");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+        Console.WriteLine();
+        Console.WriteLine();
     }
     private static void TakeControl()
     {
