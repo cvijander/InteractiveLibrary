@@ -2,14 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        FrontPage();
+        FrontPage();        
 
-        
-
-        ChooseToDisplayMenu();
-
-        
-
+        ChooseToDisplayMainMenu();        
     }
 
     private static void FrontPage()
@@ -34,7 +29,7 @@
         Console.ReadLine();
     }
 
-    public static void ChooseToDisplayMenu()
+    public static void ChooseToDisplayMainMenu()
     {
         bool displayMenu = true;       
 
@@ -75,8 +70,9 @@
     {
         if (input == "1")
         {
-            FreeYourPower();
-            return false;
+            
+            ChooseToDisplayFreeYourPowerMenu();
+            return true;
         }
         else if (input == "2")
         {
@@ -110,7 +106,7 @@
         }
         else if (input == "0")
         {
-             ExitProgram();
+            ExitProgram();
             return false;
         }
         else 
@@ -120,7 +116,7 @@
         }
     }
 
-    private static void FreeYourPower()
+    private static void DisplayFreeYourPower()
     {
         Console.Clear();
         Console.WriteLine("==== PRVI DEO: OSLOBODITE SVOJU MOC ====");
@@ -147,6 +143,39 @@
         Console.Write("Unesite opciju: ");
         Console.WriteLine();
         Console.WriteLine();
+    }
+
+    private static void ChooseToDisplayFreeYourPowerMenu()
+    {
+        bool displayFreeYourPowerMenu = true;
+        while (displayFreeYourPowerMenu == true)
+        {
+            DisplayFreeYourPower();
+            string userInput = Console.ReadLine().Trim();
+            displayFreeYourPowerMenu = HandleUserInputFreeYourPower(userInput);
+
+        }
+    }
+
+    private static bool HandleUserInputFreeYourPower(string input)
+    {
+        if (input == "1")
+        {
+            Console.Clear();
+            Console.WriteLine("Returnig false");
+            Console.ReadLine();
+            return true;
+
+        } else if (input == "0")
+        {
+            return false;
+        }
+
+        else
+        {
+            ErrorMessage();
+            return true;
+        }
     }
     private static void TakeControl()
     {
