@@ -76,28 +76,28 @@
         }
         else if (input == "2")
         {
-            TakeControl();
-            return false;
+            ChooseToDisplayTakeControl();
+            return true;
         }
         else if (input == "3")
         {
-            SevenDaysToShapeYourLife();
-            return false;
+            ChooseToDisplaySevenDaysToShapeYourLife();
+            return true;
         }
         else if (input == "4")
         {
-            DestinyLesson();
-            return false;
+            ChooseToDisplayDestinyLession();
+            return true;
         }
         else if (input == "5")
         {
-             DefinitionsAndQuotes();
-            return false;
+            ChooseToDisplayDefinitionAndQuotes();
+            return true;
         }
         else if (input == "6")
         {
-             PeopleAndExamples();   
-             return false;
+            ChooseToDisplayPeopleAndExamples();   
+             return true;
         }
         else if (input == "7")
         {
@@ -141,8 +141,7 @@
         Console.WriteLine("0. Povratak u glavni meni");
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
-        Console.WriteLine();
-        Console.WriteLine();
+       
     }
 
     private static void ChooseToDisplayFreeYourPowerMenu()
@@ -166,6 +165,12 @@
             Console.ReadLine();
             return true;
 
+        } else if (input == "2")
+        {
+            return true;
+        
+
+
         } else if (input == "0")
         {
             return false;
@@ -177,34 +182,227 @@
             return true;
         }
     }
-    private static void TakeControl()
+    private static void DisplayTakeControl()
     {
         Console.Clear();
-        Console.WriteLine("2");
+        Console.WriteLine("==== DRUGI DEO: PREUZIMANJE KONTROLE - GLAVNI SISTEM OVLADAVANJA ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("14. Elementarni uticaj: vas glavni sistem");
+        Console.WriteLine("15. Zivotne vrednosti: licni kompas");
+        Console.WriteLine("16. Pravila: evo zasto niste srecni");
+        Console.WriteLine("17. Asocijacije: tkanina zivota");
+        Console.WriteLine("18. Identitet: kljuc za expanziju");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0 Povratak u glavni meni");
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+        
     }
 
-    private static void SevenDaysToShapeYourLife()
+    private static void  ChooseToDisplayTakeControl()
     {
-        Console.Clear();
-        Console.WriteLine("3");
+        bool displayMenu = true;
+
+        while(displayMenu == true)
+        {
+            DisplayTakeControl();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplayTakeControl(userInput);
+        }
+        
     }
 
-    private static void DestinyLesson()
+    private static bool HandleDisplayTakeControl(string input)
     {
-        Console.Clear();
-        Console.WriteLine("4");
+        if (input == "14")
+        {
+            Console.Clear();
+            Console.WriteLine("Evo nas ovde ");
+            Console.ReadLine();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    private static void DefinitionsAndQuotes()
+    private static void DisplaySevenDaysToShapeYourLife()
     {
         Console.Clear();
-        Console.WriteLine("5");
+        Console.WriteLine("==== TRECI DEO: SEDAM DANA ZA OBLIKOVANJE VASEG ZIVOTA ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("19. Emocijonalna sudbina: jedini istinski uspeh");
+        Console.WriteLine("20. Telesna sudbina: tamnica bola ili plata zadovoljstva");
+        Console.WriteLine("21. Sudbina veza: mesto za deljenje i ljubav");
+        Console.WriteLine("22. Finansijska sudbina: mali koraci do malog ili velikog bogatstva");
+        Console.WriteLine("23. Budite besprekorni: vas kodeks ponasanja");
+        Console.WriteLine("24. Ovladajte svojim vremenom i svojom sudbinom");
+        Console.WriteLine("25. Odmarajte se i zabavljajte: cak je i bog uzeo slobodan dan");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
     }
 
-    private static void PeopleAndExamples()
+    private static void ChooseToDisplaySevenDaysToShapeYourLife()
+    {
+        bool displayMenu = true;
+        while(displayMenu == true)
+        {
+            DisplaySevenDaysToShapeYourLife();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplaySevenDaysToShapeYourLife(userInput);
+        }
+    }
+
+    private static bool HandleDisplaySevenDaysToShapeYourLife(string input)
+    {
+        if (input == "19")
+        {
+            Console.Clear();
+            Console.WriteLine("Ovde smo");
+            Console.ReadLine();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private static void DisplayDestinyLesson()
     {
         Console.Clear();
-        Console.WriteLine("6");
+        Console.WriteLine("==== CETVRTI DEO: POUKA O SUDBINI ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("26. Konacni izazov: sta pojedinac moze da uradi");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+    }
+
+    private static void ChooseToDisplayDestinyLession()
+    {
+        bool displayMenu = true;
+        while(displayMenu == true)
+        {
+            DisplayDestinyLesson();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplayDestinyLession(userInput);
+
+        }
+    }
+
+    private static bool HandleDisplayDestinyLession(string input)
+    {
+        if ( input == "26")
+        {
+            Console.Clear();
+            Console.WriteLine("26 tivca");
+            Console.ReadLine();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private static void DisplayDefinitionsAndQuotes()
+    {
+        Console.Clear();
+        Console.WriteLine("==== PETI DEO: DEFINICIJE I CITATI ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("27. Definicije i citati");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+    }
+
+    public static void ChooseToDisplayDefinitionAndQuotes()
+    {
+        bool displayMenu = true;
+        while(displayMenu == true)
+        {
+            DisplayDefinitionsAndQuotes();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplayDefinitionsAndQuotes(userInput);
+        }
+    }
+
+    private static bool HandleDisplayDefinitionsAndQuotes(string input)
+    {
+        if (input == "27")
+        {
+            Console.Clear();
+            Console.WriteLine("27 ca");
+            Console.ReadLine();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private static void DisplayPeopleAndExamples()
+    {
+        Console.Clear();
+        Console.WriteLine("==== SESTI DEO: LJUDI I PRIMERI  ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("28. Ljudi i primeri ");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+    }
+
+    private static void ChooseToDisplayPeopleAndExamples()
+    {
+        bool displayMenu = true;
+        while (displayMenu == true)
+        {
+            DisplayPeopleAndExamples();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplayPeopleAndExamples(userInput);
+        }
+    }
+
+    public static bool HandleDisplayPeopleAndExamples(string input)
+    {
+        if (input == "28")
+        {
+            Console.Clear();
+            Console.WriteLine("28 tica ");
+            Console.ReadLine();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private static void Notes()
