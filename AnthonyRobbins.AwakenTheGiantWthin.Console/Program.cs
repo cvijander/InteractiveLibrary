@@ -140,6 +140,11 @@
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
         Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
+        Console.WriteLine();
+        Console.WriteLine();
+
         Console.Write("Unesite opciju: ");
        
     }
@@ -161,17 +166,109 @@
         if (input == "1")
         {
             Console.Clear();
-            Console.WriteLine("Returnig false");
+            Console.WriteLine("1 nica");
             Console.ReadLine();
             return true;
 
-        } else if (input == "2")
+        }
+        else if (input == "2")
         {
+            Console.Clear();
+            Console.WriteLine("2 tica");
+            Console.ReadLine();
             return true;
-        
+        }
+        else if (input == "3")
+        {
+            Console.Clear();
+            Console.WriteLine("3 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "4")
+        {
+            Console.Clear();
+            Console.WriteLine("4 rtica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "5")
+        {
+            Console.Clear();
+            Console.WriteLine("5 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "6")
+        {
+            Console.Clear();
+            Console.WriteLine("6 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "7")
+        {
+            Console.Clear();
+            Console.WriteLine("7 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "8")
+        {
+            Console.Clear();
+            Console.WriteLine("8 ca");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "9")
+        {
+            Console.Clear();
+            Console.WriteLine("9 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "10")
+        {
+            Console.Clear();
+            Console.WriteLine("10 tka");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "11")
+        {
+            Console.Clear();
+            Console.WriteLine("11 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "12")
+        {
+            Console.Clear();
+            Console.WriteLine("12 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "13")
+        {
+            Console.Clear();
+            Console.WriteLine("13 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
 
 
-        } else if (input == "0")
+        else if (input == "0")
         {
             return false;
         }
@@ -224,9 +321,40 @@
         if (input == "14")
         {
             Console.Clear();
-            Console.WriteLine("Evo nas ovde ");
+            Console.WriteLine("14 Evo nas ovde ");
             Console.ReadLine();
             return true;
+        }
+        else if (input == "15")
+        {
+            Console.Clear();
+            Console.WriteLine("15 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "16")
+        {
+            Console.Clear();
+            Console.WriteLine("16 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "17")
+        {
+            Console.Clear();
+            Console.WriteLine("17 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "18")
+        {
+            Console.Clear();
+            Console.WriteLine("18 tica");
+            Console.ReadLine();
+            return true;
+
         }
         else if (input == "0")
         {
@@ -251,7 +379,7 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("19. Emocijonalna sudbina: jedini istinski uspeh");
+        Console.WriteLine("19. Emocioonalna sudbina: jedini istinski uspeh");
         Console.WriteLine("20. Telesna sudbina: tamnica bola ili plata zadovoljstva");
         Console.WriteLine("21. Sudbina veza: mesto za deljenje i ljubav");
         Console.WriteLine("22. Finansijska sudbina: mali koraci do malog ili velikog bogatstva");
@@ -289,6 +417,53 @@
             Console.ReadLine();
             return true;
         }
+        else if (input == "20")
+        {
+            Console.Clear();
+            Console.WriteLine("20 tica");
+            Console.ReadLine();
+            return true;
+        }
+        else if (input == "21")
+        {
+            Console.Clear();
+            Console.WriteLine("21 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "22")
+        {
+            Console.Clear();
+            Console.WriteLine("22 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "23")
+        {
+            Console.Clear();
+            Console.WriteLine("23 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "24")
+        {
+            Console.Clear();
+            Console.WriteLine("24 tica");
+            Console.ReadLine();
+            return true;
+        }
+
+        else if (input == "25")
+        {
+            Console.Clear();
+            Console.WriteLine("25 tica");
+            Console.ReadLine();
+            return true;
+        }
+
         else if (input == "0")
         {
             return false;
