@@ -101,8 +101,8 @@
         }
         else if (input == "7")
         {
-             Notes();
-            return false;
+            ChooseToDisplayNotes();
+            return true;
         }
         else if (input == "0")
         {
@@ -198,6 +198,10 @@
         Console.WriteLine();
         Console.WriteLine("0 Povratak u glavni meni");
         Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
+        Console.WriteLine();
+        Console.WriteLine();
         Console.Write("Unesite opciju: ");
         
     }
@@ -224,9 +228,19 @@
             Console.ReadLine();
             return true;
         }
-        else
+        else if (input == "0")
         {
             return false;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
         }
     }
 
@@ -247,6 +261,9 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
@@ -272,9 +289,19 @@
             Console.ReadLine();
             return true;
         }
-        else
+        else if (input == "0")
         {
             return false;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
         }
     }
 
@@ -289,6 +316,9 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
@@ -315,9 +345,19 @@
             Console.ReadLine();
             return true;
         }
-        else
+        else if (input == "0")
         {
             return false;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
         }
     }
 
@@ -332,6 +372,9 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
@@ -357,9 +400,19 @@
             Console.ReadLine();
             return true;
         }
-        else
+        else if (input == "0")
         {
             return false;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
         }
     }
 
@@ -374,6 +427,9 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
@@ -399,16 +455,76 @@
             Console.ReadLine();
             return true;
         }
-        else
+        else if (input == "0")
         {
             return false;
         }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
+        }
     }
 
-    private static void Notes()
+    private static void DisplayNotes()
     {
         Console.Clear();
-        Console.WriteLine("7");
+        Console.WriteLine("==== SEDMI DEO: VASE BELESKE  ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("29. Beleske ");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("0. Povratak u glavni meni");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("99. -- Napusti program -- ");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.Write("Unesite opciju: ");
+    }
+
+    private static void ChooseToDisplayNotes()
+    {
+        bool displayMenu = true;
+
+        while(displayMenu == true)
+        {
+            DisplayNotes();
+            string userInput = Console.ReadLine().Trim();
+            displayMenu = HandleDisplayNotes(userInput);
+
+        }
+    }
+
+    private static bool HandleDisplayNotes(string input)
+    {
+        if (input == "29")
+        {
+            Console.Clear();
+            Console.WriteLine("29 tka");
+            return true;
+        }
+        else if (input == "0")
+        {
+            return false;
+        }
+        else if (input == "99")
+        {
+            ExitProgram();
+            return false;
+        }
+        else
+        {
+            ErrorMessage();
+            return true;
+        }
     }
 
     private static void ExitProgram()
@@ -419,6 +535,8 @@
         Console.WriteLine("Pritisnite ENTER za izlaz.");
         Console.ResetColor();
         Console.ReadLine();
+
+        Environment.Exit(0);
     }
 
     private static void ErrorMessage()
@@ -428,4 +546,6 @@
         Console.ResetColor();
         Console.ReadLine();
     }
+
+    
 }
