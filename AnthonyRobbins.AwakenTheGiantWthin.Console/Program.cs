@@ -68,52 +68,45 @@
 
     private static bool HandleUserInput(string input)
     {
-        if (input == "1")
+
+        switch (input)
         {
-            
-            ChooseToDisplayFreeYourPowerMenu();
-            return true;
-        }
-        else if (input == "2")
-        {
-            ChooseToDisplayTakeControl();
-            return true;
-        }
-        else if (input == "3")
-        {
-            ChooseToDisplaySevenDaysToShapeYourLife();
-            return true;
-        }
-        else if (input == "4")
-        {
-            ChooseToDisplayDestinyLession();
-            return true;
-        }
-        else if (input == "5")
-        {
-            ChooseToDisplayDefinitionAndQuotes();
-            return true;
-        }
-        else if (input == "6")
-        {
-            ChooseToDisplayPeopleAndExamples();   
-             return true;
-        }
-        else if (input == "7")
-        {
-            ChooseToDisplayNotes();
-            return true;
-        }
-        else if (input == "0")
-        {
-            ExitProgram();
-            return false;
-        }
-        else 
-        {
-            ErrorMessage();
-            return true;
-        }
+            case "1":
+                ChooseToDisplayFreeYourPowerMenu();
+                return true;
+
+            case "2":
+                ChooseToDisplayTakeControl();
+                return true;
+
+            case "3":
+                ChooseToDisplaySevenDaysToShapeYourLife();
+                return true;
+
+            case "4":
+                ChooseToDisplayDestinyLession();
+                return true;
+
+            case "5":
+                ChooseToDisplayDefinitionAndQuotes();
+                return true;
+
+            case "6":
+                ChooseToDisplayPeopleAndExamples();
+                return true;
+
+            case "7":
+                ChooseToDisplayNotes();
+                return true;
+
+            case "0":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
+        }      
     }
 
     private static void DisplayFreeYourPower()
@@ -410,74 +403,64 @@
 
     private static bool HandleDisplaySevenDaysToShapeYourLife(string input)
     {
-        if (input == "19")
+        switch(input)
         {
-            Console.Clear();
-            Console.WriteLine("Ovde smo");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "20")
-        {
-            Console.Clear();
-            Console.WriteLine("20 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "21")
-        {
-            Console.Clear();
-            Console.WriteLine("21 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "19":
+                Console.Clear();
+                Console.WriteLine("Ovde smo");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "22")
-        {
-            Console.Clear();
-            Console.WriteLine("22 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "20":
+                Console.Clear();
+                Console.WriteLine("20 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "23")
-        {
-            Console.Clear();
-            Console.WriteLine("23 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "21":
+                Console.Clear();
+                Console.WriteLine("21 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "24")
-        {
-            Console.Clear();
-            Console.WriteLine("24 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "22":
+                Console.Clear();
+                Console.WriteLine("22 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "25")
-        {
-            Console.Clear();
-            Console.WriteLine("25 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "23":
+                Console.Clear();
+                Console.WriteLine("23 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "0")
-        {
-            return false;
+            case "24":
+                Console.Clear();
+                Console.WriteLine("24 tica");
+                Console.ReadLine();
+                return true;
+
+            case "25":
+                Console.Clear();
+                Console.WriteLine("25 tica");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+                  
+
+
     }
 
     private static void DisplayDestinyLesson()
