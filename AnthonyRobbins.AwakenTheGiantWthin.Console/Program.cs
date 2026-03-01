@@ -156,121 +156,98 @@
 
     private static bool HandleUserInputFreeYourPower(string input)
     {
-        if (input == "1")
+        switch (input)
         {
-            Console.Clear();
-            Console.WriteLine("1 nica");
-            Console.ReadLine();
-            return true;
+            case "1":
+                Console.Clear();
+                Console.WriteLine("1 nica");
+                Console.ReadLine();
+                return true;
 
-        }
-        else if (input == "2")
-        {
-            Console.Clear();
-            Console.WriteLine("2 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "3")
-        {
-            Console.Clear();
-            Console.WriteLine("3 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "2":
+                Console.Clear();
+                Console.WriteLine("2 jka");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "4")
-        {
-            Console.Clear();
-            Console.WriteLine("4 rtica");
-            Console.ReadLine();
-            return true;
-        }
+            case "3":
+                Console.Clear();
+                Console.WriteLine("3 jka");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "5")
-        {
-            Console.Clear();
-            Console.WriteLine("5 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "4":
+                Console.Clear();
+                Console.WriteLine("4 ka");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "6")
-        {
-            Console.Clear();
-            Console.WriteLine("6 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "5":
+                Console.Clear();
+                Console.WriteLine("5 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "7")
-        {
-            Console.Clear();
-            Console.WriteLine("7 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "8")
-        {
-            Console.Clear();
-            Console.WriteLine("8 ca");
-            Console.ReadLine();
-            return true;
-        }
+            case "6":
+                Console.Clear();
+                Console.WriteLine("6 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "9")
-        {
-            Console.Clear();
-            Console.WriteLine("9 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "7":
+                Console.Clear();
+                Console.WriteLine("7 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "10")
-        {
-            Console.Clear();
-            Console.WriteLine("10 tka");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "11")
-        {
-            Console.Clear();
-            Console.WriteLine("11 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "12")
-        {
-            Console.Clear();
-            Console.WriteLine("12 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "13")
-        {
-            Console.Clear();
-            Console.WriteLine("13 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
+            case "8":
+                Console.Clear();
+                Console.WriteLine("8 tica");
+                Console.ReadLine();
+                return true;
 
+            case "9":
+                Console.Clear();
+                Console.WriteLine("9 tka");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "0")
-        {
-            return false;
-        }
+            case "10":
+                Console.Clear();
+                Console.WriteLine("10 tka");
+                Console.ReadLine();
+                return true;
 
-        else
-        {
-            ErrorMessage();
-            return true;
+            case "11":
+                Console.Clear();
+                Console.WriteLine("11 tica");
+                Console.ReadLine();
+                return true;
+
+            case "12":
+                Console.Clear();
+                Console.WriteLine("12 tica");
+                Console.ReadLine();
+                return true;
+
+            case "13":
+                Console.Clear();
+                Console.WriteLine("13 tica");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
+       
     }
     private static void DisplayTakeControl()
     {
@@ -311,58 +288,50 @@
 
     private static bool HandleDisplayTakeControl(string input)
     {
-        if (input == "14")
+        switch (input)
         {
-            Console.Clear();
-            Console.WriteLine("14 Evo nas ovde ");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "15")
-        {
-            Console.Clear();
-            Console.WriteLine("15 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "14":
+                Console.Clear();
+                Console.WriteLine("14 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "16")
-        {
-            Console.Clear();
-            Console.WriteLine("16 tica");
-            Console.ReadLine();
-            return true;
-        }
+            case "15":
+                Console.Clear();
+                Console.WriteLine("15 tica");
+                Console.ReadLine();
+                return true;
 
-        else if (input == "17")
-        {
-            Console.Clear();
-            Console.WriteLine("17 tica");
-            Console.ReadLine();
-            return true;
-        }
-        else if (input == "18")
-        {
-            Console.Clear();
-            Console.WriteLine("18 tica");
-            Console.ReadLine();
-            return true;
+            case "16":
+                Console.Clear();
+                Console.WriteLine("16 tica");
+                Console.ReadLine();
+                return true;
 
-        }
-        else if (input == "0")
-        {
-            return false;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+            case "17":
+                Console.Clear();
+                Console.WriteLine("17 tica");
+                Console.ReadLine();
+                return true;
+
+            case "18":
+                Console.Clear();
+                Console.WriteLine("18 tica");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
+        }    
+               
     }
 
     private static void DisplaySevenDaysToShapeYourLife()
@@ -496,27 +465,26 @@
 
     private static bool HandleDisplayDestinyLession(string input)
     {
-        if ( input == "26")
+        switch (input)
         {
-            Console.Clear();
-            Console.WriteLine("26 tivca");
-            Console.ReadLine();
-            return true;
+            case "26":
+                Console.Clear();
+                Console.WriteLine("26 tica");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
-        else if (input == "0")
-        {
-            return false;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+              
     }
 
     private static void DisplayDefinitionsAndQuotes()
@@ -551,27 +519,26 @@
 
     private static bool HandleDisplayDefinitionsAndQuotes(string input)
     {
-        if (input == "27")
+        switch(input)
         {
-            Console.Clear();
-            Console.WriteLine("27 ca");
-            Console.ReadLine();
-            return true;
+            case "27":
+                Console.Clear();
+                Console.WriteLine("27 tica");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
-        else if (input == "0")
-        {
-            return false;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+                
     }
 
     private static void DisplayPeopleAndExamples()
@@ -606,27 +573,26 @@
 
     public static bool HandleDisplayPeopleAndExamples(string input)
     {
-        if (input == "28")
+        switch(input)
         {
-            Console.Clear();
-            Console.WriteLine("28 tica ");
-            Console.ReadLine();
-            return true;
+            case "28":
+                Console.Clear();
+                Console.WriteLine("28 tia");
+                Console.ReadLine();
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
-        else if (input == "0")
-        {
-            return false;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+                
     }
 
     private static void DisplayNotes()
@@ -663,26 +629,25 @@
 
     private static bool HandleDisplayNotes(string input)
     {
-        if (input == "29")
+        switch(input)
         {
-            Console.Clear();
-            Console.WriteLine("29 tka");
-            return true;
+            case "29":
+                Console.Clear();
+                Console.WriteLine("29 tka");
+                return true;
+
+            case "0":
+                return false;
+
+            case "99":
+                ExitProgram();
+                return false;
+
+            default:
+                ErrorMessage();
+                return true;
         }
-        else if (input == "0")
-        {
-            return false;
-        }
-        else if (input == "99")
-        {
-            ExitProgram();
-            return false;
-        }
-        else
-        {
-            ErrorMessage();
-            return true;
-        }
+       
     }
 
     private static void ExitProgram()
