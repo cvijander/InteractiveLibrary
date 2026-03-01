@@ -1,10 +1,12 @@
-﻿internal class Program
+﻿using System.Reflection.Metadata;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        FrontPage();        
+        FrontPage();
 
-        ChooseToDisplayMainMenu();        
+        ChooseToDisplayMainMenu();
     }
 
     #region Front page and Main menu
@@ -32,7 +34,7 @@
 
     public static void ChooseToDisplayMainMenu()
     {
-        bool displayMenu = true;       
+        bool displayMenu = true;
 
         while (displayMenu == true)
         {
@@ -40,10 +42,10 @@
 
             string userInput = Console.ReadLine().Trim();
 
-               displayMenu = HandleUserInput(userInput);
+            displayMenu = HandleUserInput(userInput);
         }
     }
-                
+
 
     public static void DisplayMainMenu()
     {
@@ -65,7 +67,7 @@
         Console.Write("Unesite opciju: ");
     }
 
-    
+
 
     private static bool HandleUserInput(string input)
     {
@@ -107,7 +109,7 @@
             default:
                 ErrorMessage();
                 return true;
-        }      
+        }
     }
 
     #endregion
@@ -143,7 +145,7 @@
         Console.WriteLine();
 
         Console.Write("Unesite opciju: ");
-       
+
     }
 
     private static void ChooseToDisplayFreeYourPowerMenu()
@@ -249,7 +251,7 @@
                 ErrorMessage();
                 return true;
         }
-       
+
     }
 
     #endregion
@@ -276,20 +278,20 @@
         Console.WriteLine();
         Console.WriteLine();
         Console.Write("Unesite opciju: ");
-        
+
     }
 
-    private static void  ChooseToDisplayTakeControl()
+    private static void ChooseToDisplayTakeControl()
     {
         bool displayMenu = true;
 
-        while(displayMenu == true)
+        while (displayMenu == true)
         {
             DisplayTakeControl();
             string userInput = Console.ReadLine().Trim();
             displayMenu = HandleDisplayTakeControl(userInput);
         }
-        
+
     }
 
     private static bool HandleDisplayTakeControl(string input)
@@ -336,8 +338,8 @@
             default:
                 ErrorMessage();
                 return true;
-        }    
-               
+        }
+
     }
 
     #endregion
@@ -371,7 +373,7 @@
     private static void ChooseToDisplaySevenDaysToShapeYourLife()
     {
         bool displayMenu = true;
-        while(displayMenu == true)
+        while (displayMenu == true)
         {
             DisplaySevenDaysToShapeYourLife();
             string userInput = Console.ReadLine().Trim();
@@ -381,7 +383,7 @@
 
     private static bool HandleDisplaySevenDaysToShapeYourLife(string input)
     {
-        switch(input)
+        switch (input)
         {
             case "19":
                 Console.Clear();
@@ -436,7 +438,7 @@
                 ErrorMessage();
                 return true;
         }
-                  
+
 
 
     }
@@ -465,7 +467,7 @@
     private static void ChooseToDisplayDestinyLession()
     {
         bool displayMenu = true;
-        while(displayMenu == true)
+        while (displayMenu == true)
         {
             DisplayDestinyLesson();
             string userInput = Console.ReadLine().Trim();
@@ -495,12 +497,12 @@
                 ErrorMessage();
                 return true;
         }
-              
+
     }
 
     #endregion
 
-    #region Pert Five Definitions and quotes 
+    #region Part Five Definitions and quotes 
     private static void DisplayDefinitionsAndQuotes()
     {
         Console.Clear();
@@ -523,7 +525,7 @@
     public static void ChooseToDisplayDefinitionAndQuotes()
     {
         bool displayMenu = true;
-        while(displayMenu == true)
+        while (displayMenu == true)
         {
             DisplayDefinitionsAndQuotes();
             string userInput = Console.ReadLine().Trim();
@@ -533,13 +535,14 @@
 
     private static bool HandleDisplayDefinitionsAndQuotes(string input)
     {
-        switch(input)
+        switch (input)
         {
             case "27":
                 Console.Clear();
-                Console.WriteLine("27 tica");
+                Quotes();
                 Console.ReadLine();
-                return true;
+                return true;              
+                               
 
             case "0":
                 return false;
@@ -552,7 +555,7 @@
                 ErrorMessage();
                 return true;
         }
-                
+
     }
 
     #endregion
@@ -590,11 +593,11 @@
 
     public static bool HandleDisplayPeopleAndExamples(string input)
     {
-        switch(input)
+        switch (input)
         {
             case "28":
                 Console.Clear();
-                Console.WriteLine("28 tia");
+                People();
                 Console.ReadLine();
                 return true;
 
@@ -609,7 +612,7 @@
                 ErrorMessage();
                 return true;
         }
-                
+
     }
 
     #endregion
@@ -638,7 +641,7 @@
     {
         bool displayMenu = true;
 
-        while(displayMenu == true)
+        while (displayMenu == true)
         {
             DisplayNotes();
             string userInput = Console.ReadLine().Trim();
@@ -649,7 +652,7 @@
 
     private static bool HandleDisplayNotes(string input)
     {
-        switch(input)
+        switch (input)
         {
             case "29":
                 Console.Clear();
@@ -667,7 +670,7 @@
                 ErrorMessage();
                 return true;
         }
-       
+
     }
 
     #endregion
@@ -694,16 +697,374 @@
     }
     #endregion
 
+    #region Part One Lessions
     private static void DreamsAboutDestiny()
     {
         Console.Clear();
-        Console.WriteLine("==== 1. SNOVI O SUDBINI  ====");
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 1 )  ====");
         Console.WriteLine();
+        Console.WriteLine("Vidim mnogo ljudske patnje, ne samo kod mentalnih bolesnika koje lecimo vec i kod \"normalnog\", \"zdravog\" osoblja koje se brine o pacijentima.");
+        Console.WriteLine("Istu nesrecu vidim kod izuzetno funkcionalnih, relativno uspesnih ljudi koje lecim u svojoj privatnoj ordinaciji.");
+        Console.WriteLine("Cesto su bol i patnja nepotrebni i konacno prestanu kada ljudi preuzmu kontrolu nad svojim uverenjima, osecanjima i postupcima kako bi preinacili proces svog zivota. ");
+        Console.WriteLine("Nazalost, u vecini slucajeva oni to ne cine, cekaju , zatim pokusavaju da promene los rezultat ili odlaze kod psihijatra zeleci samo da se pozale na svoj ocajan zivot ili da ih na neki nacin neko drugi \"popravi\"");
         Console.WriteLine();
+        Console.WriteLine("Osposobljavanje ljudi da shvate da sami odredjuju rezultat sopstevenih zivota nije uvek lako.Zapravo to je iscrpljujuci zadatak.");
+        Console.WriteLine("Neocekivana je bila Tonijeva genijalnost u oblasti ljudskog ponasanja i komunikacije. Te veceri sam shvatio da Toni deli moje uverenje da svako koje u osnovi zdrav , moze da preuzme komande i zivi ispunje zivot.");
         Console.WriteLine();
-        Console.WriteLine("29. Beleske ");
+        OrisonSvetMarden();
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+
+        Console.Clear(); 
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 2 )  ====");
+        Console.WriteLine();
+        BendzaminDizraeli();
+        Console.WriteLine();
+        Console.WriteLine("Svi imamo snove... Svi duboko u svojim dusama zelim da imamo poseban dar; da mozemo da ostvarimo znacajne promene, da uticemo na druge na poseban nacin");
+        Console.WriteLine("Da ucinimo da svet postane bolje mesto. Svi smo ponekad imali viziju o kvalitetu zivota koji prizeljkujemo i zasluzujemo.");
+        Console.WriteLine();
+        Console.WriteLine("Ipak, za mnoge od nas, ti snovi postali su toliko prekriveni frustracijama i dnevnom rutinom da vise i ne pokusavamo da ih ostvarimo.");
+        Console.WriteLine("Kod previse ljudi rasprsilo se taj SAN, a s njima i VOLJA da preoblikujemo svoju sudbinu.");
+        Console.WriteLine("Mnogi su izgubiuli osecaj sigurnosti koji stvara POBEDNICKI DUH.");
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("Moj zivotni cilj bio je da povratim taj san i ucinim ga stvarnim, da svakoga od nas podstaknem da se seti i koristi neogranicenu moc koja spava unutar nas. ");
+        Console.ResetColor();
+        Console.WriteLine();
+        AnthonyRobbins1();
+        Console.WriteLine();
+        Console.WriteLine("Tada sam imao snove, ali cinilo se da se nikada nece ostvariti. Medjutim danas verujem da su svi moji protekli neuspesi i frustracije postavljali temelj za saznanja koja su ");
+        Console.WriteLine("stvaril novi nivo ziljvenja u kojem sada uzivam.");
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+        Console.Clear();
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 3 )  ====");
+        Console.WriteLine();
+        People();
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+        Console.Clear();
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 4 )  ====");
+        Console.WriteLine();
+        Console.WriteLine("Takodje se secam trenutka kada se moj zivot promenio, trenutka kada sam napokon rekao: ");
+        AnthonyRobbins2();
+        Console.WriteLine();
+        Console.WriteLine("Tog trenutka sam doneo odluku da zauvek promeni svoj zivot. Odlucio sam da proimenim svaki aspekt svog zivota.");
+        Console.WriteLine("Odlucio sam da se nikada vise necu zadovoljiti manjim od onoga sto mogu da budem.");
+        Console.WriteLine("Moj odgovor je jednostavan: naucio sam da primenjujem princip koji se sada nazivam \" koncentracijom moci \" ");
+        Console.WriteLine("Vecina ljudi nema nikakvu predstavu o divovskom kapacitetu kojim mozemo odmah da upravljamo kada usresredimo sve svoje resurse na ovladavanje");
+        Console.WriteLine("samo jednom oblascu u svom zivotu. ");
+        AnthonyRobbins3();
+        Console.WriteLine();
+        AnthonyRobbins4();
+        Console.WriteLine("Verujem da vecina ljudi ne uspe u zivotu zbog toga sto ovlada nebitnim stvarima");
+        Console.WriteLine();
+        AnthonyRobbins5();
+        Console.WriteLine();
+        AnthonyRobbins6();
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+        Console.Clear();
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 5 )  ====");
+        Console.WriteLine();
+        AnthonyRobbins7();
+        Console.WriteLine();
+        Console.WriteLine("Kroz ceo taj proces nastavio sam da prepoznajem moc koji imaju pojednici, da promene prakticno sve u svojim zivotima u samo jedno trenutku");
+        Console.WriteLine("Naucio sam da su sredstva koja su nam potreban da ostvarimo svoje snove u nama i da samo cekaju dan kada cemo odluciti da se probudimo i ostvarimo pravo dobijeno rodjenjem");
+        Console.WriteLine("Poziv na budjenje koji ce podstaci one koji su posveceni tome da bolje zive i vise streme svojoj bogom danoj moci.");
+        Console.WriteLine();
+        AnthonyRobbins8();
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+
+        Console.Clear();
+        Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 6 )  ====");
+        Console.WriteLine();
+        HowToMakeAPermanentChange();
+        Console.WriteLine();       
+       
+        GoToNextPage();
+        Console.ReadLine();
+
+    }
+
+    #endregion
+
+    #region Part Five Quotes 
+
+    private static void Quotes()
+    {
+        OrisonSvetMarden();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        BendzaminDizraeli();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins1();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins2();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins3();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins4();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins5();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins6();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins7();
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
+        Console.WriteLine();
+        AnthonyRobbins8();
+
+    }
+
+    private static void OrisonSvetMarden()
+    {
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("\"Duboko unutar coveka obitavaju te uspavane moci;");
+        Console.WriteLine("   moci koji bi ga zacudile, jer nikada nije sanjao da ih poseduje;");
+        Console.WriteLine("   sile koje bi, ako bi bile probudjene i pokrenute, nacinile preokret u njegovom zivotu. \"");
+        Console.WriteLine();
+        Console.WriteLine(" - Orison Svet Marden");
+        Console.ResetColor();
+    }
+
+    private static void BendzaminDizraeli()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("\"Dosledan covek veruje u sudbinu,");
+        Console.WriteLine("   a nepredvidiv u priliku.");
+        Console.WriteLine();
+        Console.WriteLine("- Bendzamin Dizraeli");
+        Console.ResetColor();
+    }
+
+    private static void AnthonyRobbins1()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("\" Kakvu razliku jedna decenija moze da napravi! \"");
+        Console.WriteLine();
+        Console.WriteLine(" - Anthony Robbins");
+        Console.ResetColor();
+    }
+
+    private static void AnthonyRobbins2()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \" Dosta je bilo! Znam da sam mnogo vise od onoga sto pokazujem u mentalnom, emocionalnom i telesnom apsktu svog zivota.\" ");
+        Console.WriteLine();
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+    private static void AnthonyRobbins3()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Kontrolisani fokus je kao laserski zrak koji moze da presece sve sto vas naizgled zaustavlja.\"");
+        Console.WriteLine();
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+
+    private static void AnthonyRobbins4()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Kada se istrajno usresredjujemo na poboljsanje bilo koje oblasti razvijamo jedinstvene distinkcije o nacinu kako da ucinimo tu ideju boljom.\"");
+        Console.WriteLine();
+        Console.WriteLine("Jedan od razloga sto tako mali broj nas postigne ono sto zaist zeli jeste taj sto nikada ne usmeri svoj fokus; nikada ne koncentrise svoju moc.");
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+
+    private static void AnthonyRobbins5()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Sta cini razliku u kvalitetu ljudskih zivota? Kako to da cesto ljudi sa skromnim pocecicma i iz opustosenih sredina ,uprkos svemu, uspevaju da stvore zivote koji nas inspirisu?\"");
+        Console.WriteLine();
+        Console.WriteLine("Nasuprot tome, zasto mnogi koji su rodjeni u privilegovanom sredinama, sa svim sredstvima nadohvat ruke , zavrse debeli, frustrirani i cesto zavisni od neke hemijska supstance.");
+        Console.WriteLine();
+        Console.WriteLine("Koja je to tajna koja stvara strastveni, srecan i zahvalna zivot kod mnogih, dok bi kod drugih refren mogoa da zvuci ovako \"Da li je to sve \"");
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+
+    private static void AnthonyRobbins6()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Kako mogu da preuzmem naposrednu kontrolu nad svojim zivotom ? \"");
+        Console.WriteLine();
+        Console.WriteLine("Sta mogu da uradim danas sto moze napraviti razliku - nesto sto bi pomoglo meni i drugima da oblikujemo svoje sudbine? ");
+        Console.WriteLine();
+        Console.WriteLine("Kako mogu da se razvijma , ucim , rastem i delim ta saznanja s drugim na smislen i ugodan nacin.");
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+
+    private static void AnthonyRobbins7()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Kod mene se veoma rano u zivotu razvilo uverenje da smo svi ovde da bismo doprineli necim jedinstvenim, da duboko u nama lezi poseban dar.\"");
+        Console.WriteLine();
+        Console.WriteLine("Ja zaista verujem da u svakome od nas spava DIV");
+        Console.WriteLine();
+        Console.WriteLine("Svako od nas poseduje neki talenat, dar , vlastitit komaci genijalnosti koji ceka da bude dotaknut.");
+        Console.WriteLine("To moze da bude talenat za umetnost ili muziku. To moze biti specifican nacin na koji se odnosite prema onima koje volite.");
+        Console.WriteLine("To moze biti genijalan dar za prodaju, inovacije, ili uspeh u poslu ili karijeri.");
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+
+    private static void AnthonyRobbins8()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(" \"Vi ste predodredjeni za sopstveni jednistveni oblik izvrsnosti, bez obzira na to da li je to uloga izvanrednog strucnjaka, ucitelja, poslovnog coveka, majke ili oca.\"");
+        Console.WriteLine();
+        Console.WriteLine("Ne samo da verujete u to , vec ste i preduzeli akciju");        
+        Console.WriteLine(" - Anthony Robbins ");
+        Console.ResetColor();
+
+    }
+    #endregion
+
+
+    private static void GoToNextPage()
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Pritisnite ENTER za sledecu stranu...");
+        Console.ResetColor();
+    }
+
+    #region People 
+
+    private static void People()
+    {
+        Story1();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+        Story2();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+        Story3();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+        Story4();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+        Story5();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+        Story6();
+        Console.WriteLine();
+        Console.WriteLine(" -------------------- ");
+        Console.WriteLine();
+
+    }
+
+    private static void Story1()
+    {
+        Console.WriteLine("Jedna majka me je upoznala sa svojim sinom koji je dobio dijagnozu da je hiperaktivan i nesposoban da uci");
+        Console.WriteLine("Primenjujuci principe \"Upravljanja stanjima \" koji se uvec, ona nije samo uspela da ga odvikne od leka ratalina  vec su bili i prebaceni  ");
+        Console.WriteLine("u Kaliforniju gde su njenog sina ponovo testirali i ocenjeno je da je na nivou genija");
+        
+    }
+
+    private static void Story2()
+    {
+        Console.WriteLine("Jedan gospodin se oslobodio upotrebe kokaina tako sto je primenjivao neke od tehnika \" Uslovljanjvanja uspeha \"");
+    }
+
+    private static void Story3()
+    {
+        Console.WriteLine("Jedan par je  bio na ivici razvoda dok nije savladao \"Licna pravila \" ");
+    }
+
+    private static void Story4()
+    {
+        Console.WriteLine("Jedan trgovac mi je rekao da je njegov mesecni dohodak skocio sa 2000 dolara na 12000 za samo sest meseci");
+    }
+
+    private static void Story5()
+    {
+        Console.WriteLine("Jedan preduzetnik ispiricao mi je da je za osamnaest meseci uvecao prihode svog preduzeca za vise od tri miliona dolara tako sto je primenjivao ");
+        Console.WriteLine("\" Princiepe kvalitativnih pitanja i upravljanja emocijama \"");
+    }
+
+    private static void Story6()
+    {
+        Console.WriteLine("Divna mlada zena pokazala mi je svoju fotografiju iz perioda pre nego sto je izgubila 22 kilograma tako sto je primenjivala principe dejstva \"poluge\"");
+    }
+
+
+    #endregion
+
+    private static void HowToMakeAPermanentChange()
+    {
+        Console.Clear();
+        Console.WriteLine("==== KAKO DA OSTVARIMO TRAJNU PROMENU ====");
+        Console.WriteLine("");
+        GoToNextPage();
+        Console.ReadLine();
+
+        Console.Clear();
+        Console.WriteLine("==== PRVI KORAK : PODIGNITE SVOJE STANDARDE");
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+        Console.Clear();
+        Console.WriteLine("==== DRUGI KORAK : PROMENITE UVERENJA KOJA VAS OGRANICAVAJU");
+        Console.WriteLine();
+        GoToNextPage();
+        Console.ReadLine();
+
+        StepThreeChangeYourStrategy();
+
+    }
+
+    private static void StepThreeChangeYourStrategy()
+    {
+        Console.Clear();
+        Console.WriteLine("==== TRECI KORAK : PROMENITE SVOJU STRATEGIJU ====");
+        Console.WriteLine();
+        GoToNextPage();
         Console.ReadLine();
     }
 
-    
 }
