@@ -7,6 +7,7 @@
         ChooseToDisplayMainMenu();        
     }
 
+    #region Front page and Main menu
     private static void FrontPage()
     {
         Console.Clear();
@@ -109,6 +110,9 @@
         }      
     }
 
+    #endregion
+
+    #region Part One  Free your power menu
     private static void DisplayFreeYourPower()
     {
         Console.Clear();
@@ -159,9 +163,7 @@
         switch (input)
         {
             case "1":
-                Console.Clear();
-                Console.WriteLine("1 nica");
-                Console.ReadLine();
+                DreamsAboutDestiny();
                 return true;
 
             case "2":
@@ -249,6 +251,10 @@
         }
        
     }
+
+    #endregion
+
+    #region Part two Take Control
     private static void DisplayTakeControl()
     {
         Console.Clear();
@@ -334,6 +340,9 @@
                
     }
 
+    #endregion
+
+    #region Part Three Seven days to shape your life 
     private static void DisplaySevenDaysToShapeYourLife()
     {
         Console.Clear();
@@ -431,7 +440,9 @@
 
 
     }
+    #endregion
 
+    #region Part Four Destiny lession
     private static void DisplayDestinyLesson()
     {
         Console.Clear();
@@ -487,6 +498,9 @@
               
     }
 
+    #endregion
+
+    #region Pert Five Definitions and quotes 
     private static void DisplayDefinitionsAndQuotes()
     {
         Console.Clear();
@@ -541,6 +555,9 @@
                 
     }
 
+    #endregion
+
+    #region Part Six People and Examples 
     private static void DisplayPeopleAndExamples()
     {
         Console.Clear();
@@ -595,6 +612,9 @@
                 
     }
 
+    #endregion
+
+    #region Part Seven Notes
     private static void DisplayNotes()
     {
         Console.Clear();
@@ -650,6 +670,9 @@
        
     }
 
+    #endregion
+
+    #region ExitProgram and ErrorMessage 
     private static void ExitProgram()
     {
         Console.Clear();
@@ -667,6 +690,18 @@
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Molimo pritisnite ENTER i ponovo odaberite ali samo neku od ponudjenih opcija.");
         Console.ResetColor();
+        Console.ReadLine();
+    }
+    #endregion
+
+    private static void DreamsAboutDestiny()
+    {
+        Console.Clear();
+        Console.WriteLine("==== 1. SNOVI O SUDBINI  ====");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("29. Beleske ");
         Console.ReadLine();
     }
 
