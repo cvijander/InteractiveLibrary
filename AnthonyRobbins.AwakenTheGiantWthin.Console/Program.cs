@@ -772,7 +772,7 @@ internal class Program
         Console.WriteLine("Osposobljavanje ljudi da shvate da sami odredjuju rezultat sopstevenih zivota nije uvek lako.Zapravo to je iscrpljujuci zadatak.");
         Console.WriteLine("Neocekivana je bila Tonijeva genijalnost u oblasti ljudskog ponasanja i komunikacije. Te veceri sam shvatio da Toni deli moje uverenje da svako koje u osnovi zdrav , moze da preuzme komande i zivi ispunje zivot.");
         Console.WriteLine();
-        OrisonSvetMarden();
+        OrisonSvetMarden().ShowQuote();
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -865,7 +865,8 @@ internal class Program
 
     private static void Quotes()
     {
-        OrisonSvetMarden();
+       
+        OrisonSvetMarden().ShowQuote();
         Console.WriteLine();
         Console.WriteLine(" --------------------------------------------------------- ");
         Console.WriteLine();
@@ -905,9 +906,20 @@ internal class Program
 
     }
 
-    private static void OrisonSvetMarden()
+    private static Quote OrisonSvetMarden()
     {
+        Quote OrisonSvetMarden1 = new Quote();
+        OrisonSvetMarden1.Author = "Orison Svet Marden";
+        OrisonSvetMarden1.Tekst = "\"Duboko unutar coveka obitavaju te uspavane moci; \nmoci koji bi ga zacudile, jer nikada nije sanjao da ih poseduje;\n sile koje bi, ako bi bile probudjene i pokrenute, nacinile preokret u njegovom zivotu. \"";
+        OrisonSvetMarden1.Color = ConsoleColor.Yellow;
+
+        //return OrisonSvetMarden1.ShowQuote();
+
+        // OrisonSvetMarden1.ShowQuote();
+
+        return OrisonSvetMarden1;
         
+        /*
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\"Duboko unutar coveka obitavaju te uspavane moci;");
         Console.WriteLine("   moci koji bi ga zacudile, jer nikada nije sanjao da ih poseduje;");
@@ -915,6 +927,7 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine(" - Orison Svet Marden");
         Console.ResetColor();
+        */
     }
 
     private static void BendzaminDizraeli()
@@ -1147,7 +1160,8 @@ class Quote
         Console.WriteLine();
         Console.WriteLine($"- {Author}");
         Console.ResetColor();
-        Console.WriteLine("-----------------");
+        Console.WriteLine();
+        Console.WriteLine(" --------------------------------------------------------- ");
     }
 
 }
