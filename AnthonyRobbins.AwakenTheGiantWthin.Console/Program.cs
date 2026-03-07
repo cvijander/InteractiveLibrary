@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 
 internal class Program
 {
@@ -269,11 +270,11 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("14. Elementarni uticaj: vas glavni sistem");
-        Console.WriteLine("15. Zivotne vrednosti: licni kompas");
-        Console.WriteLine("16. Pravila: evo zasto niste srecni");
-        Console.WriteLine("17. Asocijacije: tkanina zivota");
-        Console.WriteLine("18. Identitet: kljuc za expanziju");
+        Console.WriteLine("1. Elementarni uticaj: vas glavni sistem");
+        Console.WriteLine("2. Zivotne vrednosti: licni kompas");
+        Console.WriteLine("3. Pravila: evo zasto niste srecni");
+        Console.WriteLine("4. Asocijacije: tkanina zivota");
+        Console.WriteLine("5. Identitet: kljuc za expanziju");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0 Povratak u glavni meni");
@@ -303,31 +304,31 @@ internal class Program
     {
         switch (input)
         {
-            case "14":
+            case "1":
                 Console.Clear();
                 Console.WriteLine("14 tica");
                 Console.ReadLine();
                 return true;
 
-            case "15":
+            case "2":
                 Console.Clear();
                 Console.WriteLine("15 tica");
                 Console.ReadLine();
                 return true;
 
-            case "16":
+            case "3":
                 Console.Clear();
                 Console.WriteLine("16 tica");
                 Console.ReadLine();
                 return true;
 
-            case "17":
+            case "4":
                 Console.Clear();
                 Console.WriteLine("17 tica");
                 Console.ReadLine();
                 return true;
 
-            case "18":
+            case "5":
                 Console.Clear();
                 Console.WriteLine("18 tica");
                 Console.ReadLine();
@@ -357,13 +358,13 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("19. Emocioonalna sudbina: jedini istinski uspeh");
-        Console.WriteLine("20. Telesna sudbina: tamnica bola ili plata zadovoljstva");
-        Console.WriteLine("21. Sudbina veza: mesto za deljenje i ljubav");
-        Console.WriteLine("22. Finansijska sudbina: mali koraci do malog ili velikog bogatstva");
-        Console.WriteLine("23. Budite besprekorni: vas kodeks ponasanja");
-        Console.WriteLine("24. Ovladajte svojim vremenom i svojom sudbinom");
-        Console.WriteLine("25. Odmarajte se i zabavljajte: cak je i bog uzeo slobodan dan");
+        Console.WriteLine("1. Emocioonalna sudbina: jedini istinski uspeh");
+        Console.WriteLine("2. Telesna sudbina: tamnica bola ili plata zadovoljstva");
+        Console.WriteLine("3. Sudbina veza: mesto za deljenje i ljubav");
+        Console.WriteLine("4. Finansijska sudbina: mali koraci do malog ili velikog bogatstva");
+        Console.WriteLine("5. Budite besprekorni: vas kodeks ponasanja");
+        Console.WriteLine("6. Ovladajte svojim vremenom i svojom sudbinom");
+        Console.WriteLine("7. Odmarajte se i zabavljajte: cak je i bog uzeo slobodan dan");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
@@ -390,43 +391,43 @@ internal class Program
     {
         switch (input)
         {
-            case "19":
+            case "1":
                 Console.Clear();
                 Console.WriteLine("Ovde smo");
                 Console.ReadLine();
                 return true;
 
-            case "20":
+            case "2":
                 Console.Clear();
                 Console.WriteLine("20 tica");
                 Console.ReadLine();
                 return true;
 
-            case "21":
+            case "3":
                 Console.Clear();
                 Console.WriteLine("21 tica");
                 Console.ReadLine();
                 return true;
 
-            case "22":
+            case "4":
                 Console.Clear();
                 Console.WriteLine("22 tica");
                 Console.ReadLine();
                 return true;
 
-            case "23":
+            case "5":
                 Console.Clear();
                 Console.WriteLine("23 tica");
                 Console.ReadLine();
                 return true;
 
-            case "24":
+            case "6":
                 Console.Clear();
                 Console.WriteLine("24 tica");
                 Console.ReadLine();
                 return true;
 
-            case "25":
+            case "7":
                 Console.Clear();
                 Console.WriteLine("25 tica");
                 Console.ReadLine();
@@ -457,7 +458,7 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("26. Konacni izazov: sta pojedinac moze da uradi");
+        Console.WriteLine("1. Konacni izazov: sta pojedinac moze da uradi");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
@@ -485,7 +486,7 @@ internal class Program
     {
         switch (input)
         {
-            case "26":
+            case "1":
                 Console.Clear();
                 Console.WriteLine("26 tica");
                 Console.ReadLine();
@@ -570,7 +571,7 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("27. Definicije i citati");
+        Console.WriteLine("1. Definicije i citati");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
@@ -597,7 +598,7 @@ internal class Program
     {
         switch (input)
         {
-            case "27":
+            case "1":
                 Console.Clear();
                 Quotes();
                 Console.ReadLine();
@@ -628,7 +629,7 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("28. Ljudi i primeri ");
+        Console.WriteLine("1. Ljudi i primeri ");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
@@ -655,7 +656,7 @@ internal class Program
     {
         switch (input)
         {
-            case "28":
+            case "1":
                 Console.Clear();
                 People();
                 Console.ReadLine();
@@ -685,7 +686,7 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
-        Console.WriteLine("29. Beleske ");
+        Console.WriteLine("1. Beleske ");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("0. Povratak u glavni meni");
@@ -714,7 +715,7 @@ internal class Program
     {
         switch (input)
         {
-            case "29":
+            case "1":
                 Console.Clear();
                 Console.WriteLine("29 tka");
                 return true;
@@ -1125,6 +1126,28 @@ internal class Program
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
+    }
+
+}
+
+
+class Quote
+{
+    public string Author { get; set; }
+
+    public string Tekst { get; set; }
+
+    public ConsoleColor Color { get; set; }
+
+     
+    public void ShowQuote()
+    {
+        Console.ForegroundColor = Color;
+        Console.WriteLine($"\" {Tekst}\"");
+        Console.WriteLine();
+        Console.WriteLine($"- {Author}");
+        Console.ResetColor();
+        Console.WriteLine("-----------------");
     }
 
 }
