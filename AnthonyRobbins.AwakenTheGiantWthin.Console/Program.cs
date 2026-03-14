@@ -682,7 +682,7 @@ internal class Program
     private static void DisplayNotes()
     {
         Console.Clear();
-        Console.WriteLine("==== SEDMI DEO: VASE BELESKE  ====");
+        Console.WriteLine("==== OSMI DEO: VASE BELESKE  ====");
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
@@ -717,7 +717,12 @@ internal class Program
         {
             case "1":
                 Console.Clear();
-                Console.WriteLine("29 tka");
+                Console.WriteLine("Unesite vase beleske, ovde, te iste beleske videce u text fajlu nazvan \"KorisnickeBeleske.txt\"");
+                string beleske = "";
+                string userInput = Console.ReadLine();
+                beleske = beleske + userInput;
+
+                System.IO.File.AppendAllText(@"D:\Dev\csharp\InteractiveLibrary\AnthonyRobbins.AwakenTheGiantWthin.Console\KorisnickeBeleske.txt", beleske);
                 return true;
 
             case "0":
@@ -1132,6 +1137,18 @@ class Quote
         Console.ResetColor();
         Console.WriteLine();
         Console.WriteLine(" --------------------------------------------------------- ");
+    }
+
+    public Quote()
+    {
+
+    }
+
+    public Quote(string author, string text, ConsoleColor color)
+    {
+        Author = author;
+        Text = text;
+        Color = color;
     }
 
 }
