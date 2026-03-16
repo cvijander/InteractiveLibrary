@@ -720,7 +720,7 @@ internal class Program
                 Console.WriteLine("Unesite vase beleske, ovde, te iste beleske videce u text fajlu nazvan \"KorisnickeBeleske.txt\"");
                 string beleske = "";
                 string userInput = Console.ReadLine();
-                beleske = beleske + userInput;
+                beleske = beleske + "\n" + userInput;
 
                 System.IO.File.AppendAllText(@"D:\Dev\csharp\InteractiveLibrary\AnthonyRobbins.AwakenTheGiantWthin.Console\KorisnickeBeleske.txt", beleske);
                 return true;
@@ -870,26 +870,28 @@ internal class Program
 
     private static void Quotes()
     {
-       
-        OrisonSvetMarden().ShowQuote();
-        
-        BendzaminDizraeli().ShowQuote();
-        
-        AnthonyRobbins1().ShowQuote();
-        
-        AnthonyRobbins2().ShowQuote();
-       
-        AnthonyRobbins3().ShowQuote();
-       
-        AnthonyRobbins4().ShowQuote();
 
-        AnthonyRobbins5().ShowQuote();
 
-        AnthonyRobbins6().ShowQuote();
-        
-        AnthonyRobbins7().ShowQuote();
-       
-        AnthonyRobbins8().ShowQuote();
+        List<Quote> allQuotes = new List<Quote>()
+        { OrisonSvetMarden(),
+          BendzaminDizraeli(),
+          AnthonyRobbins1(),
+          AnthonyRobbins2(),
+          AnthonyRobbins3(),
+          AnthonyRobbins4(),
+        };
+
+
+
+        allQuotes.Add(AnthonyRobbins5());
+        allQuotes.Add(AnthonyRobbins6());
+        allQuotes.Add(AnthonyRobbins7());
+        allQuotes.Add(AnthonyRobbins8());
+
+        foreach (Quote quote in allQuotes)
+        {
+            quote.ShowQuote();
+        }
 
     }
 
@@ -1151,4 +1153,56 @@ class Quote
         Color = color;
     }
 
+}
+
+class Author
+{
+    
+
+    private string name;
+
+    public string Name
+    {
+        get {
+            return name;
+        }
+        set
+        {
+            if ( string.IsNullOrWhiteSpace(value) )
+            {
+                Console.WriteLine("Unos je prazan.");
+                name = "Unknown";
+            }
+            else
+            {
+                string filteredValue = value.Trim();
+
+                if (filteredValue.Length < 3)
+                {
+                    Console.WriteLine("Please enter more than 2 characters.");
+                    name = "Unknown";
+                }
+                else
+                {
+                    name = filteredValue.Substring(0, 1).ToUpper() + filteredValue.Substring(1).ToLower();
+                }
+                
+            }
+            
+        }
+    }
+
+    public string Biography { get; set; }
+    public List<Quote> hisQuotes { get; set; } = new List<Quote>();
+
+    public Author()
+    {
+
+    }
+
+    public Author(string name, string biography)
+    {
+        Name = name;
+        Biography = biography;
+    }
 }
