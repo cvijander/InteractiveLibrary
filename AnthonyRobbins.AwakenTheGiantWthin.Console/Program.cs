@@ -6,24 +6,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Author testAutor = new Author();
-        Console.WriteLine("-- saljemo samo razmake --");
-        testAutor.Name = "   ";
-        Console.WriteLine($"Resultat u bazi {testAutor.Name}");
-        Console.WriteLine();
-
-        Console.WriteLine("-- Test saljemo kratko ime");
-        testAutor.Name = "ab";
-        Console.WriteLine($"Resultat u bazi {testAutor.Name}");
-        Console.WriteLine();
-
-        Console.WriteLine("Test 3 saljemo ime sa velikim i malim slovima ");
-        testAutor.Name = "anThoNY";
-        Console.WriteLine($"Resultat u bazi {testAutor.Name}");
-        Console.WriteLine();
-        Console.ReadLine();
-
-
         FrontPage();
 
         ChooseToDisplayMainMenu();
@@ -798,7 +780,8 @@ internal class Program
         Console.WriteLine("Osposobljavanje ljudi da shvate da sami odredjuju rezultat sopstevenih zivota nije uvek lako.Zapravo to je iscrpljujuci zadatak.");
         Console.WriteLine("Neocekivana je bila Tonijeva genijalnost u oblasti ljudskog ponasanja i komunikacije. Te veceri sam shvatio da Toni deli moje uverenje da svako koje u osnovi zdrav , moze da preuzme komande i zivi ispunje zivot.");
         Console.WriteLine();
-        OrisonSvetMarden().ShowQuote();
+        BookBase.OrisonSvetMarden().ShowQuote();
+        
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -807,7 +790,7 @@ internal class Program
         Console.Clear(); 
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 2 )  ====");
         Console.WriteLine();
-        BendzaminDizraeli().ShowQuote();
+        BookBase.BendzaminDizraeli().ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Svi imamo snove... Svi duboko u svojim dusama zelim da imamo poseban dar; da mozemo da ostvarimo znacajne promene, da uticemo na druge na poseban nacin");
         Console.WriteLine("Da ucinimo da svet postane bolje mesto. Svi smo ponekad imali viziju o kvalitetu zivota koji prizeljkujemo i zasluzujemo.");
@@ -820,7 +803,7 @@ internal class Program
         Console.WriteLine("Moj zivotni cilj bio je da povratim taj san i ucinim ga stvarnim, da svakoga od nas podstaknem da se seti i koristi neogranicenu moc koja spava unutar nas. ");
         Console.ResetColor();
         Console.WriteLine();
-        AnthonyRobbins1().ShowQuote();
+        BookBase.AnthonyRobbins1().ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Tada sam imao snove, ali cinilo se da se nikada nece ostvariti. Medjutim danas verujem da su svi moji protekli neuspesi i frustracije postavljali temelj za saznanja koja su ");
         Console.WriteLine("stvaril novi nivo ziljvenja u kojem sada uzivam.");
@@ -840,21 +823,21 @@ internal class Program
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 4 )  ====");
         Console.WriteLine();
         Console.WriteLine("Takodje se secam trenutka kada se moj zivot promenio, trenutka kada sam napokon rekao: ");
-        AnthonyRobbins2().ShowQuote();
+        BookBase.AnthonyRobbins2().ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Tog trenutka sam doneo odluku da zauvek promeni svoj zivot. Odlucio sam da proimenim svaki aspekt svog zivota.");
         Console.WriteLine("Odlucio sam da se nikada vise necu zadovoljiti manjim od onoga sto mogu da budem.");
         Console.WriteLine("Moj odgovor je jednostavan: naucio sam da primenjujem princip koji se sada nazivam \" koncentracijom moci \" ");
         Console.WriteLine("Vecina ljudi nema nikakvu predstavu o divovskom kapacitetu kojim mozemo odmah da upravljamo kada usresredimo sve svoje resurse na ovladavanje");
         Console.WriteLine("samo jednom oblascu u svom zivotu. ");
-        AnthonyRobbins3().ShowQuote();
+        BookBase.AnthonyRobbins3().ShowQuote();
         Console.WriteLine();
-        AnthonyRobbins4().ShowQuote();
+        BookBase.AnthonyRobbins4().ShowQuote();
         Console.WriteLine("Verujem da vecina ljudi ne uspe u zivotu zbog toga sto ovlada nebitnim stvarima");
         Console.WriteLine();
-        AnthonyRobbins5().ShowQuote();
+        BookBase.AnthonyRobbins5().ShowQuote();
         Console.WriteLine();
-        AnthonyRobbins6().ShowQuote();
+        BookBase.AnthonyRobbins6().ShowQuote();
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -862,13 +845,13 @@ internal class Program
         Console.Clear();
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 5 )  ====");
         Console.WriteLine();
-        AnthonyRobbins7().ShowQuote();
+        BookBase.AnthonyRobbins7().ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Kroz ceo taj proces nastavio sam da prepoznajem moc koji imaju pojednici, da promene prakticno sve u svojim zivotima u samo jedno trenutku");
         Console.WriteLine("Naucio sam da su sredstva koja su nam potreban da ostvarimo svoje snove u nama i da samo cekaju dan kada cemo odluciti da se probudimo i ostvarimo pravo dobijeno rodjenjem");
         Console.WriteLine("Poziv na budjenje koji ce podstaci one koji su posveceni tome da bolje zive i vise streme svojoj bogom danoj moci.");
         Console.WriteLine();
-        AnthonyRobbins8().ShowQuote();
+        BookBase.AnthonyRobbins8().ShowQuote();
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -897,19 +880,19 @@ internal class Program
         Author orison = new Author("Orison Svet Marden", "Ovo dodati");
         Author benzaminDizraeli = new Author("Bendzamin Dizraeli", "Ovo dodati");
 
-        antony.hisQuotes.Add(AnthonyRobbins1());
-        antony.hisQuotes.Add(AnthonyRobbins2());
-        antony.hisQuotes.Add(AnthonyRobbins3());
-        antony.hisQuotes.Add(AnthonyRobbins4());
-        antony.hisQuotes.Add(AnthonyRobbins5());
-        antony.hisQuotes.Add(AnthonyRobbins6());
-        antony.hisQuotes.Add(AnthonyRobbins7());
-        antony.hisQuotes.Add(AnthonyRobbins8());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins1());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins2());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins3());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins4());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins5());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins6());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins7());
+        antony.hisQuotes.Add(BookBase.AnthonyRobbins8());
 
 
-        orison.hisQuotes.Add(OrisonSvetMarden());
+        orison.hisQuotes.Add(BookBase.OrisonSvetMarden());
 
-        benzaminDizraeli.hisQuotes.Add(BendzaminDizraeli());
+        benzaminDizraeli.hisQuotes.Add(BookBase.BendzaminDizraeli());
 
         allAuthors.Add(antony);
         allAuthors.Add(orison);
@@ -917,131 +900,24 @@ internal class Program
 
         foreach (Author author in allAuthors)
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($" === Citati autora : {author.Name} === ");
+            Console.WriteLine($"O autoru: {author.Biography}");
+            Console.ResetColor();
+            Console.WriteLine("------------------");
 
+            foreach (Quote quote in author.hisQuotes)
+            {
+                quote.ShowQuote();
+            }
         }
 
-        List<Quote> allQuotes = new List<Quote>()
-        { OrisonSvetMarden(),
-          BendzaminDizraeli(),
-          AnthonyRobbins1(),
-          AnthonyRobbins2(),
-          AnthonyRobbins3(),
-          AnthonyRobbins4(),
-        };
-
-
-
-        allQuotes.Add(AnthonyRobbins5());
-        allQuotes.Add(AnthonyRobbins6());
-        allQuotes.Add(AnthonyRobbins7());
-        allQuotes.Add(AnthonyRobbins8());
-
-        foreach (Quote quote in allQuotes)
-        {
-            quote.ShowQuote();
-        }
-
+        Console.WriteLine();
+       
     }
+   
 
-    private static Quote OrisonSvetMarden()
-    {
-        Quote quote = new Quote();
-        //OrisonSvetMarden1.Author = "Orison Svet Marden";
-        quote.Text = "\"Duboko unutar coveka obitavaju te uspavane moci; \nmoci koji bi ga zacudile, jer nikada nije sanjao da ih poseduje;\n sile koje bi, ako bi bile probudjene i pokrenute, nacinile preokret u njegovom zivotu. \"";
-        quote.Color = ConsoleColor.Yellow;
-                
-        return quote;         
-    }
-
-    private static Quote BendzaminDizraeli()
-    {
-        Quote quote = new Quote();
-        //BendzaminDizraeli1.Author = "Bendzamin Dizraeli";
-        quote.Text = " Dosledan covek veruje u sudbinu, \n a nepredvidiv u priliku.";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;        
-    }
-
-    private static Quote AnthonyRobbins1()
-    {
-        Quote quote = new Quote();
-       // AnthonyRobbins1.Author = "Anthony Robbins";
-        quote.Text = "\" Kakvu razliku jedna decenija moze da napravi! \" ";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;       
-    }
-
-    private static Quote AnthonyRobbins2()
-    {
-        Quote quote = new Quote();
-       // AnthonyRobbins2.Author = "Anthony Robbins";
-        quote.Text = " \" Dosta je bilo! Znam da sam mnogo vise od onoga sto pokazujem u mentalnom, emocionalnom i telesnom apsktu svog zivota.\" ";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
-    private static Quote AnthonyRobbins3()
-    {
-        Quote quote = new Quote();
-        // AnthonyRobbins3.Author = "Anthony Robbins";
-        quote.Text = " \"Kontrolisani fokus je kao laserski zrak koji moze da presece sve sto vas naizgled zaustavlja.\"";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
-
-    private static Quote AnthonyRobbins4()
-    {
-        Quote quote = new Quote();
-        //AnthonyRobbins4.Author = "Anthony Robbins";
-        quote.Text = " \"Kada se istrajno usresredjujemo na poboljsanje bilo koje oblasti razvijamo jedinstvene distinkcije o nacinu kako da ucinimo tu ideju boljom. \n Jedan od razloga sto tako mali broj nas postigne ono sto zaista zeli jeste taj sto nikada ne usmeri svoj fokus; nikada ne koncentrise svoju moc.";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
-
-    private static Quote AnthonyRobbins5()
-    {
-        Quote quote = new Quote();
-        //AnthonyRobbins5.Author = "Anthony Robbins";
-        quote.Text = " Sta cini razliku u kvalitetu ljudskih zivota? Kako to da cesto ljudi sa skromnim pocecicma i iz opustosenih sredina ,uprkos svemu, uspevaju da stvore zivote koji nas inspirisu?  \n Nasuprot tome, zasto mnogi koji su rodjeni u privilegovanom sredinama, sa svim sredstvima nadohvat ruke , zavrse debeli, frustrirani i cesto zavisni od neke hemijska supstance. \n Koja je to tajna koja stvara strastveni, srecan i zahvalna zivot kod mnogih, dok bi kod drugih refren mogoa da zvuci ovako \"Da li je to sve \"";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
-
-    private static  Quote AnthonyRobbins6()
-    {
-        Quote quote = new Quote();
-       // AnthonyRobbins6.Author = "Anthony Robbins";
-        quote.Text = "\"Kako mogu da preuzmem naposrednu kontrolu nad svojim zivotom ? \n  Sta mogu da uradim danas sto moze napraviti razliku - nesto sto bi pomoglo meni i drugima da oblikujemo svoje sudbine? \nKako mogu da se razvijma , ucim , rastem i delim ta saznanja s drugim na smislen i ugodan nacin. ";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;        
-    }
-
-    private static Quote AnthonyRobbins7()
-    {
-
-        Quote quote = new Quote();
-        //AnthonyRobbins7.Author = "Anthony Robbins";
-        quote.Text = "Kod mene se veoma rano u zivotu razvilo uverenje da smo svi ovde da bismo doprineli necim jedinstvenim, da duboko u nama lezi poseban dar.\n \n Ja zaista verujem da u svakome od nas spava DIV \n Svako od nas poseduje neki talenat, dar , vlastitit komaci genijalnosti koji ceka da bude dotaknut.\nTo moze da bude talenat za umetnost ili muziku. To moze biti specifican nacin na koji se odnosite prema onima koje volite.\nTo moze biti genijalan dar za prodaju, inovacije, ili uspeh u poslu ili karijeri.\");";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
-
-    private static Quote AnthonyRobbins8()
-    {
-        Quote quote = new Quote();
-        //AnthonyRobbins8.Author = "Anthony Robbins";
-        quote.Text = "Vi ste predodredjeni za sopstveni jednistveni oblik izvrsnosti, bez obzira na to da li je to uloga izvanrednog strucnjaka, ucitelja, poslovnog coveka, majke ili oca. \n Ne samo da verujete u to , vec ste i preduzeli akciju\"";
-        quote.Color = ConsoleColor.Yellow;
-
-        return quote;
-    }
+   
     #endregion
 
 
@@ -1056,66 +932,34 @@ internal class Program
 
     private static void People()
     {
-        Story1();
+        BookStories.Story1();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
-        Story2();
+        BookStories.Story2();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
-        Story3();
+        BookStories.Story3();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
-        Story4();
+        BookStories.Story4();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
-        Story5();
+        BookStories.Story5();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
-        Story6();
+        BookStories.Story6();
         Console.WriteLine();
         Console.WriteLine(" -------------------- ");
         Console.WriteLine();
 
     }
 
-    private static void Story1()
-    {
-        Console.WriteLine("Jedna majka me je upoznala sa svojim sinom koji je dobio dijagnozu da je hiperaktivan i nesposoban da uci");
-        Console.WriteLine("Primenjujuci principe \"Upravljanja stanjima \" koji se uvec, ona nije samo uspela da ga odvikne od leka ratalina  vec su bili i prebaceni  ");
-        Console.WriteLine("u Kaliforniju gde su njenog sina ponovo testirali i ocenjeno je da je na nivou genija");
-        
-    }
-
-    private static void Story2()
-    {
-        Console.WriteLine("Jedan gospodin se oslobodio upotrebe kokaina tako sto je primenjivao neke od tehnika \" Uslovljanjvanja uspeha \"");
-    }
-
-    private static void Story3()
-    {
-        Console.WriteLine("Jedan par je  bio na ivici razvoda dok nije savladao \"Licna pravila \" ");
-    }
-
-    private static void Story4()
-    {
-        Console.WriteLine("Jedan trgovac mi je rekao da je njegov mesecni dohodak skocio sa 2000 dolara na 12000 za samo sest meseci");
-    }
-
-    private static void Story5()
-    {
-        Console.WriteLine("Jedan preduzetnik ispiricao mi je da je za osamnaest meseci uvecao prihode svog preduzeca za vise od tri miliona dolara tako sto je primenjivao ");
-        Console.WriteLine("\" Princiepe kvalitativnih pitanja i upravljanja emocijama \"");
-    }
-
-    private static void Story6()
-    {
-        Console.WriteLine("Divna mlada zena pokazala mi je svoju fotografiju iz perioda pre nego sto je izgubila 22 kilograma tako sto je primenjivala principe dejstva \"poluge\"");
-    }
+  
 
 
     #endregion

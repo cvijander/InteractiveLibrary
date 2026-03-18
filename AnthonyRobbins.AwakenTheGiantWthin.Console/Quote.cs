@@ -16,8 +16,6 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
         {
             System.Console.ForegroundColor = Color;
             System.Console.WriteLine($"\" {Text}\"");
-            System.Console.WriteLine();
-            System.Console.WriteLine($"- Author");
             System.Console.ResetColor();
             System.Console.WriteLine();
             System.Console.WriteLine(" --------------------------------------------------------- ");
