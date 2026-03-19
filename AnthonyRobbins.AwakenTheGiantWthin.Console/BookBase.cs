@@ -6,6 +6,22 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
 {
     public static class BookBase
     {
+        public static List<Author> GlobalniAutori = new List<Author>();
+
+        public static void NapuniMagacin()
+        {
+            Author antony = new Author("Anthony Robbins", "Americki autor");
+            Author orison = new Author("Orison Svet Marden", "Ovo dodati");
+
+            // Palimo mašinu SAMO OVDE i dodeljujemo prvi bar-kod!
+            antony.hisQuotes.Add(AnthonyRobbins1());
+            orison.hisQuotes.Add(OrisonSvetMarden());
+
+            GlobalniAutori.Add(antony);
+            GlobalniAutori.Add(orison);
+        }
+
+
         public static Quote OrisonSvetMarden()
         {
             Quote quote = new Quote();            
@@ -96,6 +112,25 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
             return quote;
         }
 
+
+        public static Quote SingleQuoteWithAuthor(List<Author> allAuthors, Quote quote)
+        {
+            foreach (Author autor in allAuthors)
+            {
+                foreach (Quote oneQuote in autor.hisQuotes)
+                {
+                    if (autor.hisQuotes.Contains(quote))
+                    {
+                        if (oneQuote == quote)
+                        {
+                            System.Console.WriteLine($"Autor je {autor.Name}");
+                        }
+                        
+                    }
+                }
+            }
+            return quote;
+        }
 
 
     }

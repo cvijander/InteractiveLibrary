@@ -6,6 +6,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        BookBase.NapuniMagacin();
+        BookBase.SingleQuoteWithAuthor(BookBase.GlobalniAutori, BookBase.OrisonSvetMarden());
+
         FrontPage();
 
         ChooseToDisplayMainMenu();

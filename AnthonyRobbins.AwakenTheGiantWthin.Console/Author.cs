@@ -33,7 +33,8 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
                     }
                     else
                     {
-                        name = filteredValue.Substring(0, 1).ToUpper() + filteredValue.Substring(1).ToLower();
+                        //name = filteredValue.Substring(0, 1).ToUpper() + filteredValue.Substring(1).ToLower();
+                        name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(filteredValue);
                     }
 
                 }
