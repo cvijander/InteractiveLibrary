@@ -81,6 +81,32 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
             return quote;
         }
 
+        public static Author ReturnAuthorFromQuote(Quote quote)
+        {
+            
+            foreach (Author author in AllAuthors)
+            {
+                if(author.hisQuotes.Contains(quote))
+                {
+                    return author;
+                }
+                                
+            }
+            return null;
+        }
+
+        public static void PrintSingleQuote(Quote quote, Author author)
+        {
+            quote.ShowQuote();
+            System.Console.WriteLine($"Author : -- {author.Name}");
+        }
+
+        public static void DisplaySingleQuoteWithAuthor(Quote quote)
+        {
+            PrintSingleQuote(quote, ReturnAuthorFromQuote(quote));
+        }
+             
+
 
     }
 }

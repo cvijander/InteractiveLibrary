@@ -6,8 +6,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        BookBase.NapuniMagacin();
-        BookBase.SingleQuoteWithAuthor(BookBase.GlobalniAutori, BookBase.OrisonSvetMarden());
+        BookBase.LoadAuthorsAndQuotes();
+        BookBase.SingleQuoteWithAuthor(BookBase.AllAuthors, BookBase.OrisonSvetMarden1);
+        Console.ReadLine();
 
         FrontPage();
 
@@ -783,8 +784,10 @@ internal class Program
         Console.WriteLine("Osposobljavanje ljudi da shvate da sami odredjuju rezultat sopstevenih zivota nije uvek lako.Zapravo to je iscrpljujuci zadatak.");
         Console.WriteLine("Neocekivana je bila Tonijeva genijalnost u oblasti ljudskog ponasanja i komunikacije. Te veceri sam shvatio da Toni deli moje uverenje da svako koje u osnovi zdrav , moze da preuzme komande i zivi ispunje zivot.");
         Console.WriteLine();
-        BookBase.OrisonSvetMarden().ShowQuote();
-        
+        BookBase.PrintSingleQuote(BookBase.OrisonSvetMarden1,BookBase.ReturnAuthorFromQuote(BookBase.OrisonSvetMarden1) );
+        BookBase.OrisonSvetMarden1.ShowQuote();
+        BookBase.SingleQuoteWithAuthor(BookBase.AllAuthors, BookBase.OrisonSvetMarden1);
+
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -793,7 +796,7 @@ internal class Program
         Console.Clear(); 
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 2 )  ====");
         Console.WriteLine();
-        BookBase.BendzaminDizraeli().ShowQuote();
+        BookBase.BendzaminDizraeli1.ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Svi imamo snove... Svi duboko u svojim dusama zelim da imamo poseban dar; da mozemo da ostvarimo znacajne promene, da uticemo na druge na poseban nacin");
         Console.WriteLine("Da ucinimo da svet postane bolje mesto. Svi smo ponekad imali viziju o kvalitetu zivota koji prizeljkujemo i zasluzujemo.");
@@ -806,7 +809,7 @@ internal class Program
         Console.WriteLine("Moj zivotni cilj bio je da povratim taj san i ucinim ga stvarnim, da svakoga od nas podstaknem da se seti i koristi neogranicenu moc koja spava unutar nas. ");
         Console.ResetColor();
         Console.WriteLine();
-        BookBase.AnthonyRobbins1().ShowQuote();
+        BookBase.AnthonyRobbins1.ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Tada sam imao snove, ali cinilo se da se nikada nece ostvariti. Medjutim danas verujem da su svi moji protekli neuspesi i frustracije postavljali temelj za saznanja koja su ");
         Console.WriteLine("stvaril novi nivo ziljvenja u kojem sada uzivam.");
@@ -826,21 +829,21 @@ internal class Program
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 4 )  ====");
         Console.WriteLine();
         Console.WriteLine("Takodje se secam trenutka kada se moj zivot promenio, trenutka kada sam napokon rekao: ");
-        BookBase.AnthonyRobbins2().ShowQuote();
+        BookBase.AnthonyRobbins2.ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Tog trenutka sam doneo odluku da zauvek promeni svoj zivot. Odlucio sam da proimenim svaki aspekt svog zivota.");
         Console.WriteLine("Odlucio sam da se nikada vise necu zadovoljiti manjim od onoga sto mogu da budem.");
         Console.WriteLine("Moj odgovor je jednostavan: naucio sam da primenjujem princip koji se sada nazivam \" koncentracijom moci \" ");
         Console.WriteLine("Vecina ljudi nema nikakvu predstavu o divovskom kapacitetu kojim mozemo odmah da upravljamo kada usresredimo sve svoje resurse na ovladavanje");
         Console.WriteLine("samo jednom oblascu u svom zivotu. ");
-        BookBase.AnthonyRobbins3().ShowQuote();
+        BookBase.AnthonyRobbins3.ShowQuote();
         Console.WriteLine();
-        BookBase.AnthonyRobbins4().ShowQuote();
+        BookBase.AnthonyRobbins4.ShowQuote();
         Console.WriteLine("Verujem da vecina ljudi ne uspe u zivotu zbog toga sto ovlada nebitnim stvarima");
         Console.WriteLine();
-        BookBase.AnthonyRobbins5().ShowQuote();
+        BookBase.AnthonyRobbins5.ShowQuote();
         Console.WriteLine();
-        BookBase.AnthonyRobbins6().ShowQuote();
+        BookBase.AnthonyRobbins6.ShowQuote();
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -848,13 +851,13 @@ internal class Program
         Console.Clear();
         Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 5 )  ====");
         Console.WriteLine();
-        BookBase.AnthonyRobbins7().ShowQuote();
+        BookBase.AnthonyRobbins7.ShowQuote();
         Console.WriteLine();
         Console.WriteLine("Kroz ceo taj proces nastavio sam da prepoznajem moc koji imaju pojednici, da promene prakticno sve u svojim zivotima u samo jedno trenutku");
         Console.WriteLine("Naucio sam da su sredstva koja su nam potreban da ostvarimo svoje snove u nama i da samo cekaju dan kada cemo odluciti da se probudimo i ostvarimo pravo dobijeno rodjenjem");
         Console.WriteLine("Poziv na budjenje koji ce podstaci one koji su posveceni tome da bolje zive i vise streme svojoj bogom danoj moci.");
         Console.WriteLine();
-        BookBase.AnthonyRobbins8().ShowQuote();
+        BookBase.AnthonyRobbins8.ShowQuote();
         Console.WriteLine();
         GoToNextPage();
         Console.ReadLine();
@@ -877,31 +880,8 @@ internal class Program
 
     private static void Quotes()
     {
-        List<Author> allAuthors = new List<Author>();
-
-        Author antony = new Author("Anthony Robbins","Americki autor");
-        Author orison = new Author("Orison Svet Marden", "Ovo dodati");
-        Author benzaminDizraeli = new Author("Bendzamin Dizraeli", "Ovo dodati");
-
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins1());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins2());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins3());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins4());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins5());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins6());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins7());
-        antony.hisQuotes.Add(BookBase.AnthonyRobbins8());
-
-
-        orison.hisQuotes.Add(BookBase.OrisonSvetMarden());
-
-        benzaminDizraeli.hisQuotes.Add(BookBase.BendzaminDizraeli());
-
-        allAuthors.Add(antony);
-        allAuthors.Add(orison);
-        allAuthors.Add(benzaminDizraeli);
-
-        foreach (Author author in allAuthors)
+      
+        foreach (Author author in BookBase.AllAuthors)
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($" === Citati autora : {author.Name} === ");
