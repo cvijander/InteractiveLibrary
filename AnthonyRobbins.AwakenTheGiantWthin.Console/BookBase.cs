@@ -81,7 +81,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
             return quote;
         }
 
-        public static Author ReturnAuthorFromQuote(Quote quote)
+        private static Author ReturnAuthorFromQuote(Quote quote)
         {
             
             foreach (Author author in AllAuthors)
@@ -95,7 +95,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
             return null;
         }
 
-        public static void PrintSingleQuote(Quote quote, Author author)
+        private static void PrintSingleQuote(Quote quote, Author author)
         {
             quote.ShowQuote();
             System.Console.WriteLine($"Author : -- {author.Name}");
