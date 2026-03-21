@@ -27,7 +27,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             System.Console.Write("Unesite opciju: ");
         }
 
-        private static void ChooseToDisplayNotes()
+        public static void ChooseToDisplayNotes()
         {
             bool displayMenu = true;
 
