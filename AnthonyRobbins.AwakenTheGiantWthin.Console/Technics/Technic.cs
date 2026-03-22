@@ -38,8 +38,8 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
 
             UIHelpers.GoToNextPage();
 
-            
-            for (int i = 0 ; i < Steps.Count; i ++)
+
+            for (int i = 0; i < Steps.Count; i++)
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -49,7 +49,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
                 Console.WriteLine();
                 Console.WriteLine(Steps[i].Story);
 
-                if (Steps[i].SubSteps.Count > 0 )
+                if (Steps[i].SubSteps.Count > 0)
                 {
                     Console.WriteLine();
                     foreach (Step substep in Steps[i].SubSteps)
@@ -62,9 +62,15 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
                         Console.WriteLine();
                     }
                 }
-                Console.WriteLine();
-                UIHelpers.GoToNextPage();
-            }
+               
+
+                if (i < Steps.Count -1 )
+                {
+                    Console.WriteLine();
+                    UIHelpers.GoToNextPage();
+                }
+                
+            }            
 
             Console.WriteLine("----------------------");
             Console.WriteLine("Pritisnite ENTER za povratak");
