@@ -1,4 +1,5 @@
 ﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
             Console.WriteLine("==== TEHNIKE I PRAKTICNI KORACI ====");
             Console.WriteLine();
             Console.WriteLine("1. Kako da ostvarite trajnu promenu (3 koraka)");
+            Console.WriteLine("2. Sledeca tehnika");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("0. Povratak u glavni meni");
@@ -43,9 +45,12 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
             switch (input)
             {
                 case "1":
+                    PartOneLessions.HowToMakeAPermanentChange();
+                    return true;
+
+                case "2":
                     Console.Clear();
-                    Console.WriteLine("1 nica");
-                    Console.ReadLine();
+                    Console.WriteLine("2 jka");
                     return true;
 
                 case "0":

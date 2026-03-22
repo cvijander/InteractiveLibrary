@@ -1,5 +1,4 @@
 ﻿using System;
-using Console = Console;
 using System.Collections.Generic;
 using System.Text;
 using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp;
