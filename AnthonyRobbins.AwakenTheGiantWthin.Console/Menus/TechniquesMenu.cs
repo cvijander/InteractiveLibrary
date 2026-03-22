@@ -1,5 +1,6 @@
 ﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
 using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,7 +46,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
             switch (input)
             {
                 case "1":
-                    PartOneLessions.HowToMakeAPermanentChange();
+                    BookBase.AllTechnics[0].ShowTechnic();
                     return true;
 
                 case "2":

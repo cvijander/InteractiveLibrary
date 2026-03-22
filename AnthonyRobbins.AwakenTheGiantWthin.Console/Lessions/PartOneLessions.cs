@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp;
 using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics;
 
 
 
@@ -27,8 +28,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
             BookBase.DisplaySingleQuoteWithAuthor(BookBase.OrisonSvetMarden1);
 
             Console.WriteLine();
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
+            UIHelpers.GoToNextPage();           
 
 
             Console.Clear();
@@ -53,7 +53,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
             Console.WriteLine("stvaril novi nivo ziljvenja u kojem sada uzivam.");
             Console.WriteLine();
             UIHelpers.GoToNextPage();
-            Console.ReadLine();
+           
 
             Console.Clear();
             Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 3 )  ====");
@@ -61,8 +61,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
             PartOneLessions.People();
             Console.WriteLine();
             UIHelpers.GoToNextPage();
-            Console.ReadLine();
-
+            
             Console.Clear();
             Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 4 )  ====");
             Console.WriteLine();
@@ -84,7 +83,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
             BookBase.DisplaySingleQuoteWithAuthor(BookBase.AnthonyRobbins6);
             Console.WriteLine();
             UIHelpers.GoToNextPage();
-            Console.ReadLine();
+            
 
             Console.Clear();
             Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 5 )  ====");
@@ -98,17 +97,10 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
             BookBase.DisplaySingleQuoteWithAuthor(BookBase.AnthonyRobbins8);
             Console.WriteLine();
             UIHelpers.GoToNextPage();
-            Console.ReadLine();
-
-
-            Console.Clear();
-            Console.WriteLine("==== 1. SNOVI O SUDBINI ( Strana 6 )  ====");
-            Console.WriteLine();
-            HowToMakeAPermanentChange();
-            Console.WriteLine();
-
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
+           
+            BookBase.AllTechnics[0].ShowTechnic();
+           
+            
 
         }
 
@@ -141,37 +133,8 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
 
         }
 
-        public static void HowToMakeAPermanentChange()
-        {
-            Console.Clear();
-            Console.WriteLine("==== KAKO DA OSTVARIMO TRAJNU PROMENU ====");
-            Console.WriteLine("");
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
-
-            Console.Clear();
-            Console.WriteLine("==== PRVI KORAK : PODIGNITE SVOJE STANDARDE");
-            Console.WriteLine();
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
-
-            Console.Clear();
-            Console.WriteLine("==== DRUGI KORAK : PROMENITE UVERENJA KOJA VAS OGRANICAVAJU");
-            Console.WriteLine();
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
-
-            StepThreeChangeYourStrategy();
-
-        }
-        public static void StepThreeChangeYourStrategy()
-        {
-            Console.Clear();
-            Console.WriteLine("==== TRECI KORAK : PROMENITE SVOJU STRATEGIJU ====");
-            Console.WriteLine();
-            UIHelpers.GoToNextPage();
-            Console.ReadLine();
-        }
+        
+       
 
         #endregion
     }

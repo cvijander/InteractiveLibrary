@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Reflection.PortableExecutable;
 using System.Text;
@@ -34,25 +35,35 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
             Console.WriteLine($"Author: {AuthorTechnic.Name}");
             Console.WriteLine($"Opis {Description}");
             Console.WriteLine();
-            Console.WriteLine("-- KORACI ---");
 
+            UIHelpers.GoToNextPage();
+
+            
             for (int i = 0 ; i < Steps.Count; i ++)
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"Korak {i + 1} : {Steps[i].Title}");
                 Console.ResetColor();
 
+                Console.WriteLine();
                 Console.WriteLine(Steps[i].Story);
 
                 if (Steps[i].SubSteps.Count > 0 )
                 {
                     Console.WriteLine();
-                    foreach (string substep in Steps[i].SubSteps)
+                    foreach (Step substep in Steps[i].SubSteps)
                     {
-                        Console.WriteLine($"   {substep}");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"   {substep.Title}");
+                        Console.ResetColor();
+                        Console.WriteLine();
+                        Console.WriteLine($" {substep.Story}");
+                        Console.WriteLine();
                     }
                 }
                 Console.WriteLine();
+                UIHelpers.GoToNextPage();
             }
 
             Console.WriteLine("----------------------");

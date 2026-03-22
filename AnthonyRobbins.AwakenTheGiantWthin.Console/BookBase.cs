@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -30,6 +31,8 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
         public static Quote AnthonyRobbins8 = new Quote("Vi ste predodredjeni za sopstveni jednistveni oblik izvrsnosti, bez obzira na to da li je to uloga izvanrednog strucnjaka, ucitelja, poslovnog coveka, majke ili oca. \n Ne samo da verujete u to , vec ste i preduzeli akciju\"", ConsoleColor.Yellow);
 
 
+        public static List<Technic> AllTechnics = new List<Technic>(); 
+
         
         public static void LoadAuthorsAndQuotes()
         {
@@ -55,6 +58,8 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
             AllAuthors.Add(antony);
             AllAuthors.Add(orison);
             AllAuthors.Add(dizraeli);
+
+            LoadTechnics();
 
         }
         
@@ -106,6 +111,15 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
             PrintSingleQuote(quote, ReturnAuthorFromQuote(quote));
         }
              
+
+        private static  void LoadTechnics()
+        {
+            Author antony = AllAuthors[0];
+
+            AllTechnics.Add(TechnicFactory.HowToMakePermanentChange(antony));
+
+
+        }
 
 
     }

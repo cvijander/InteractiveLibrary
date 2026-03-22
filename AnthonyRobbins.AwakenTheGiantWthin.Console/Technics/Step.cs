@@ -10,7 +10,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
 
         public string Story { get; set; }
 
-        public List<string> SubSteps { get; set; }
+        public List<Step> SubSteps { get; set; }
 
         public Step()
         {
@@ -22,7 +22,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Technics
             Title = title;
             Story = story;
 
-            SubSteps = new List<string>();
+            SubSteps = new List<Step>();
         }
     }
 }
