@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Lessions
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions
 {
     public static class PartFiveLessions
     {
@@ -11,11 +11,11 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Lessions
 
             foreach (Author author in BookBase.AllAuthors)
             {
-                System.Console.ForegroundColor = ConsoleColor.Cyan;
-                System.Console.WriteLine($" === Citati autora : {author.Name} === ");
-                System.Console.WriteLine($"O autoru: {author.Biography}");
-                System.Console.ResetColor();
-                System.Console.WriteLine("------------------");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($" === Citati autora : {author.Name} === ");
+                Console.WriteLine($"O autoru: {author.Biography}");
+                Console.ResetColor();
+                Console.WriteLine("------------------");
 
                 foreach (Quote quote in author.hisQuotes)
                 {
@@ -23,7 +23,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Lessions
                 }
             }
 
-            System.Console.WriteLine();
+            Console.WriteLine();
 
         }
     }

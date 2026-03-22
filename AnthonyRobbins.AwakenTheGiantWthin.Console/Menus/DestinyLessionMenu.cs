@@ -1,9 +1,9 @@
-﻿using AnthonyRobbins.AwakenTheGiantWthin.Console.Helpers;
+﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
 {
     public static class DestinyLessionMenu
     {
@@ -12,21 +12,21 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
         #region Part Four Destiny lession
         private static void DisplayDestinyLesson()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("==== CETVRTI DEO: POUKA O SUDBINI ====");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("1. Konacni izazov: sta pojedinac moze da uradi");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("0. Povratak u glavni meni");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("99. -- Napusti program -- ");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.Write("Unesite opciju: ");
+            Console.Clear();
+            Console.WriteLine("==== CETVRTI DEO: POUKA O SUDBINI ====");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("1. Konacni izazov: sta pojedinac moze da uradi");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("0. Povratak u glavni meni");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("99. -- Napusti program -- ");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("Unesite opciju: ");
         }
 
         public static void ChooseToDisplayDestinyLession()
@@ -35,7 +35,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             while (displayMenu == true)
             {
                 DisplayDestinyLesson();
-                string userInput = System.Console.ReadLine().Trim();
+                string userInput = Console.ReadLine().Trim();
                 displayMenu = HandleDisplayDestinyLession(userInput);
 
             }
@@ -46,9 +46,9 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             switch (input)
             {
                 case "1":
-                    System.Console.Clear();
-                    System.Console.WriteLine("26 tica");
-                    System.Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("26 tica");
+                    Console.ReadLine();
                     return true;
 
                 case "0":

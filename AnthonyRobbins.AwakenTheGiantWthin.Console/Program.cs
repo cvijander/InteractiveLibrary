@@ -1,9 +1,9 @@
 ﻿using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
-using AnthonyRobbins.AwakenTheGiantWthin.Console;
-using AnthonyRobbins.AwakenTheGiantWthin.Console.Helpers;
-using AnthonyRobbins.AwakenTheGiantWthin.Console.Lessions;
-using AnthonyRobbins.AwakenTheGiantWthin.Console.Menus;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus;
 
 
 internal class Program
@@ -15,7 +15,7 @@ internal class Program
 
         MainMenu.FrontPage();
 
-         MainMenu.ChooseToDisplayMainMenu();
+        MainMenu.ChooseToDisplayMainMenu();
     }
                       
 

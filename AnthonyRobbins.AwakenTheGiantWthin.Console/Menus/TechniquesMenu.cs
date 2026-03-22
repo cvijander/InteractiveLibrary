@@ -1,9 +1,9 @@
-﻿using AnthonyRobbins.AwakenTheGiantWthin.Console.Helpers;
+﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
 {
     public static class TechniquesMenu
     {
@@ -11,19 +11,19 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
 
         private static void DisplayTechiques()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("==== TEHNIKE I PRAKTICNI KORACI ====");
-            System.Console.WriteLine();
-            System.Console.WriteLine("1. Kako da ostvarite trajnu promenu (3 koraka)");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("0. Povratak u glavni meni");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("99. -- Napusti program -- ");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.Write("Unesite opciju: ");
+            Console.Clear();
+            Console.WriteLine("==== TEHNIKE I PRAKTICNI KORACI ====");
+            Console.WriteLine();
+            Console.WriteLine("1. Kako da ostvarite trajnu promenu (3 koraka)");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("0. Povratak u glavni meni");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("99. -- Napusti program -- ");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("Unesite opciju: ");
         }
 
         public static void ChooseToDisplayTechiques()
@@ -32,7 +32,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             while (displayMenu == true)
             {
                 DisplayTechiques();
-                string userInput = System.Console.ReadLine().Trim();
+                string userInput = Console.ReadLine().Trim();
                 displayMenu = HandleDisplayTechiques(userInput);
 
             }
@@ -43,9 +43,9 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             switch (input)
             {
                 case "1":
-                    System.Console.Clear();
-                    System.Console.WriteLine("1 nica");
-                    System.Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("1 nica");
+                    Console.ReadLine();
                     return true;
 
                 case "0":

@@ -1,30 +1,30 @@
-﻿using AnthonyRobbins.AwakenTheGiantWthin.Console.Helpers;
-using AnthonyRobbins.AwakenTheGiantWthin.Console.Lessions;
+﻿using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Helpers;
+using AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Lessions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
 {
     public static class QuotesMenu
     {
         private static void DisplayDefinitionsAndQuotes()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("==== PETI DEO: DEFINICIJE I CITATI ====");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("1. Definicije i citati");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("0. Povratak u glavni meni");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine("99. -- Napusti program -- ");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.Write("Unesite opciju: ");
+            Console.Clear();
+            Console.WriteLine("==== PETI DEO: DEFINICIJE I CITATI ====");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("1. Definicije i citati");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("0. Povratak u glavni meni");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("99. -- Napusti program -- ");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("Unesite opciju: ");
         }
 
         public static void ChooseToDisplayDefinitionAndQuotes()
@@ -33,7 +33,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             while (displayMenu == true)
             {
                 DisplayDefinitionsAndQuotes();
-                string userInput = System.Console.ReadLine().Trim();
+                string userInput = Console.ReadLine().Trim();
                 displayMenu = HandleDisplayDefinitionsAndQuotes(userInput);
             }
         }
@@ -43,9 +43,9 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console.Menus
             switch (input)
             {
                 case "1":
-                    System.Console.Clear();
+                    Console.Clear();
                     PartFiveLessions.Quotes();
-                    System.Console.ReadLine();
+                    Console.ReadLine();
                     return true;
 
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 {
     public class Quote
     {
@@ -14,11 +14,11 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
 
         public void ShowQuote()
         {
-            System.Console.ForegroundColor = Color;
-            System.Console.WriteLine($"\" {Text}\"");
-            System.Console.ResetColor();
-            System.Console.WriteLine();
-            System.Console.WriteLine(" --------------------------------------------------------- ");
+            Console.ForegroundColor = Color;
+            Console.WriteLine($"\" {Text}\"");
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.WriteLine(" --------------------------------------------------------- ");
         }
 
         public Quote()

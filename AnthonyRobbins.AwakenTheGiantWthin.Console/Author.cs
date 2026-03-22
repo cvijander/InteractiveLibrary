@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 {
     public class Author
     {
@@ -19,7 +19,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    System.Console.WriteLine("Unos je prazan.");
+                    Console.WriteLine("Unos je prazan.");
                     name = "Unknown";
                 }
                 else
@@ -28,7 +28,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
 
                     if (filteredValue.Length < 3)
                     {
-                        System.Console.WriteLine("Please enter more than 2 characters.");
+                        Console.WriteLine("Please enter more than 2 characters.");
                         name = "Unknown";
                     }
                     else

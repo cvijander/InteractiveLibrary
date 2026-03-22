@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnthonyRobbins.AwakenTheGiantWthin.Console
+namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 {
     public static class BookBase
     {
@@ -72,7 +72,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
                     {
                         if (oneQuote == quote)
                         {
-                            System.Console.WriteLine($"Autor je {autor.Name}");
+                            Console.WriteLine($"Autor je {autor.Name}");
                         }
                         
                     }
@@ -98,7 +98,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.Console
         private static void PrintSingleQuote(Quote quote, Author author)
         {
             quote.ShowQuote();
-            System.Console.WriteLine($"Author : -- {author.Name}");
+            Console.WriteLine($"Author : -- {author.Name}");
         }
 
         public static void DisplaySingleQuoteWithAuthor(Quote quote)
