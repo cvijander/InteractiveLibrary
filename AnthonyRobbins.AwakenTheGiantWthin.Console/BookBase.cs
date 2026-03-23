@@ -30,7 +30,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 
         public static Quote AnthonyRobbins8 = new Quote("Vi ste predodredjeni za sopstveni jednistveni oblik izvrsnosti, bez obzira na to da li je to uloga izvanrednog strucnjaka, ucitelja, poslovnog coveka, majke ili oca. \n Ne samo da verujete u to , vec ste i preduzeli akciju\"", ConsoleColor.Yellow);
 
-        public static Quote TomasMafet1 = new Quote("Kopamo sebi grobove svojim zubima ",ConsoleColor.Yellow);
+        public static Quote TomasMafet1 = new Quote("Kopamo sebi grobove svojim zubima. ",ConsoleColor.Yellow);
 
         public static List<Technic> AllTechnics = new List<Technic>(); 
 
