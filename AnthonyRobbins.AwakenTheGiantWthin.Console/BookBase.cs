@@ -30,6 +30,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 
         public static Quote AnthonyRobbins8 = new Quote("Vi ste predodredjeni za sopstveni jednistveni oblik izvrsnosti, bez obzira na to da li je to uloga izvanrednog strucnjaka, ucitelja, poslovnog coveka, majke ili oca. \n Ne samo da verujete u to , vec ste i preduzeli akciju\"", ConsoleColor.Yellow);
 
+        public static Quote TomasMafet1 = new Quote("Kopamo sebi grobove svojim zubima ",ConsoleColor.Yellow);
 
         public static List<Technic> AllTechnics = new List<Technic>(); 
 
@@ -39,6 +40,7 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
             Author antony = new Author("Anthony Robbins", "Americki autor");
             Author orison = new Author("Orison Svet Marden", "Ovo dodati");
             Author dizraeli = new Author("Bendzamin Dizraeli", "Ovo dodati");
+            Author mafet = new Author("Tomas Mafet", "Lekar iz 17 tog veka");
 
 
             
@@ -55,9 +57,12 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
 
             dizraeli.hisQuotes.Add(BendzaminDizraeli1);
 
+            mafet.hisQuotes.Add(TomasMafet1);
+
             AllAuthors.Add(antony);
             AllAuthors.Add(orison);
             AllAuthors.Add(dizraeli);
+            AllAuthors.Add(mafet);
 
             LoadTechnics();
 
@@ -109,6 +114,12 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp
         public static void DisplaySingleQuoteWithAuthor(Quote quote)
         {
             PrintSingleQuote(quote, ReturnAuthorFromQuote(quote));
+        }
+
+        public static string GetQuoteWithAuthorAsString(Quote quote)
+        {
+            Author author = ReturnAuthorFromQuote(quote);
+            return $"\n  \"{quote.Text}\"\n -{author.Name}\n";
         }
              
 
