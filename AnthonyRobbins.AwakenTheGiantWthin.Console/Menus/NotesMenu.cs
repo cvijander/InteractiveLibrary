@@ -42,6 +42,39 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
 
         private static bool HandleDisplayNotes(string input)
         {
+            Console.WriteLine("Do sada unete beleske ");
+            try
+            {
+                string content = File.ReadAllText(@"D:\Dev\csharp\InteractiveLibrary\AnthonyRobbins.AwakenTheGiantWthin.Console\KorisnickeBeleske.txt");
+                Console.WriteLine(content);
+            }
+
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Nazalost, desio se problem sa aplikacijom");
+                Console.WriteLine("Proverite samo da li je naziv beleski lepo napisan \"KorisnickeBeleske.txt\"");
+                Console.WriteLine(ex.Message);
+            }
+
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine("Nazalost, desio se problem sa aplikacijom");
+                Console.WriteLine(@"Proverite samo da li direktorijum D:\\Dev\\csharp\\InteractiveLibrary\\AnthonyRobbins.AwakenTheGiantWthin.Console postoji");
+                Console.WriteLine(ex.Message);
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Nazalost, desio se problem sa aplikacijom");
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("***** zatvaramo ovaj deo");
+                Console.ReadLine();
+            }
+
+
             switch (input)
             {
                 case "1":
