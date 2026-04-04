@@ -90,11 +90,43 @@ namespace AnthonyRobbins.AwakenTheGiantWthin.ConsoleApp.Menus
             try
             {
                 Console.Clear();
+
+                ReadAllNotes();
+
                 Console.WriteLine("Unesite vase beleske, ovde, te iste beleske videce u text fajlu nazvan \"KorisnickeBeleske.txt\"");
-                string beleske = "";
-                string userInput = Console.ReadLine();
-                beleske = beleske + "\n" + userInput;
-                System.IO.File.AppendAllText(@"DD:\Dev\csharp\InteractiveLibrary\AnthonyRobbins.AwakenTheGiantWthin.Console\KorisnickeBeleske.txt", beleske);
+                Console.WriteLine("Unosom :KRAJ: prekidate izvrsavanje unosa ");
+                Console.WriteLine();
+
+               StringBuilder builder = new StringBuilder();
+
+                bool stillWritingToNotes = true;
+
+                //string beleske = "";
+
+                do
+                {
+                    string userInput = Console.ReadLine();
+
+
+                    if (userInput.Contains(":KRAJ:"))
+                    {
+                        stillWritingToNotes = false;
+
+                        //beleske = beleske + "\n" + userInput.Substring(0, userInput.Length - 6);
+                        builder.AppendLine(userInput.Substring(0, userInput.Length - 6));
+
+                        break;
+                    }
+
+                    //beleske = beleske + "\n" + userInput;
+
+                   builder.AppendLine(userInput);
+
+                    
+
+                } while (stillWritingToNotes);
+
+                System.IO.File.AppendAllText(@"D:\Dev\csharp\InteractiveLibrary\AnthonyRobbins.AwakenTheGiantWthin.Console\KorisnickeBeleske.txt", builder.ToString());
             }
 
             catch (Exception ex)

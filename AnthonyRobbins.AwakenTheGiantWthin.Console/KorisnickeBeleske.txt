@@ -6,3 +6,42 @@ Dakle ovo je sad malo bolje.
 Sad samo imamo problem, sto novi red tj klikom na enter on nestane i onda mora ponovo 
 Juce sam produzio teretanu i eto pao mi je telefon dok sam se presvlacio i pukao mi je malo ekran 
 
+
+DA vidimo da li sada ovo radi? 
+Bolje zar ne 
+unosimo nesto pa da vidimo da li ovo radi
+jos uvek ne radi, ali korigovacemo 
+tastiramo
+ok sada defitnivno radi 
+KRAJ
+ok sada mozemo i malim slovima ali to ne smemo dakle 
+kraj
+moramo da uklonimo to upper defitnitino 
+KRAJ
+ok ovde sada testiramo da li radi ovo sa novim unosom 
+dakle stisnem enter on nastalvja da pise dalje 
+sto je super , e sad ako stavimo KRAJ 
+nista, dakle i to smo dodali .. znaci moramo da stavimo :KRAJ: 
+ok opet smo tu .daneke nesto ne valja 
+:KRAJ:
+samo da vidimo da li radi :KRAJ:
+ok, da dakle on onda ako dodam kraj bilo gde ne reaguje vec samo kad je na novom stranici 
+:KRAJ:
+ok hajde sad da vidmo da li ce da prikaze rec 
+kdakle kraj
+:KRAJ:
+testiramo i dalje da vidsimo da li radi 
+ovde nam treba jedan consolo writeline razmak 
+dakle ako unesmo nesto 
+ok ovo je ostalo, ali cim stavimo rec sa kraj onda pukne 
+sto znaci da bi bilo zgodno da zadnju recenicu npr uklonimo zadnjih 6 karaktera i da tako unesemo ,npr
+ne i dalje to ne radi, ok moramo da vidimo sto 
+stavili smo -6 ali mislim da je problem u snimanju jer onda cim vidi break iskoci 
+ok testiramo da li sada ovo radi sa kraj 
+pomerili smo beleske van okvira i snimac 
+dakle da ividimo da li sad ovo radi 
+ok da vidimo da li mi sve treba ili moze bez tog dela 
+testiramo sledeci red da li je ok 
+cek da dodamo i prekid zamenili smo klasicne beleske koje su bile string sa string builderom, pa da vidimo 
+kako ce sada to da se ponasa i da li ce da se prikazuje 
+evo da testrirmo kraj 
